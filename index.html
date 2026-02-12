@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contractor Pro - Elegan & Modern</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <div class="logo-loader">CONSTRUCT<span>PRO</span></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+    <nav id="main-nav">
+        <div class="logo">CONSTRUCT<span>PRO</span></div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#" class="nav-link" data-id="Beranda" data-en="Home">Beranda</a></li>
+            <li><a href="#" class="nav-link" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a></li>
+            <li><a href="#" class="nav-link" data-id="Layanan" data-en="Services">Layanan</a></li>
+            <li><a href="#" class="nav-link" data-id="Portofolio" data-en="Portfolio">Portofolio</a></li>
+
+            <li class="dropdown">
+                <span class="nav-link" data-id="Artikel" data-en="Articles">
+                    Artikel <i class="fas fa-chevron-down icon-small"></i>
+                </span>
+                <div class="dropdown-content">
+                    <a href="#" data-id="Blog Konstruksi" data-en="Construction Blog">Blog Konstruksi</a>
+                    <a href="#" data-id="Berita Proyek" data-en="Project News">Berita Proyek</a>
+                </div>
+            </li>
+
+            <li><a href="#" class="nav-link" data-id="Kontak" data-en="Contact">Kontak</a></li>
+
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                <i class="fas fa-search search-icon" id="search-icon"></i>
+            </div>
+
+            <button class="lang-btn" id="lang-btn">EN</button>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1500">
+            <h1 id="hero-title">Membangun Mahakarya <br><span>Tanpa Batas</span></h1>
+            <p>Kami menghadirkan presisi arsitektur dan kekuatan struktur dalam setiap jengkal bangunan Anda.</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn-primary">Mulai Proyek</a>
+                <a href="#" class="btn-outline">Lihat Galeri</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYEK -->
+    <section class="stats">
+        <div class="stat-item">
+            <h2 class="counter" data-target="150">0</h2>
+            <p>Proyek Selesai</p>
+        </div>
+        <div class="stat-item">
+            <h2 class="counter" data-target="50">0</h2>
+            <p>Tenaga Ahli</p>
+        </div>
+        <div class="stat-item">
+            <h2 class="counter" data-target="12">0</h2>
+            <p>Penghargaan</p>
+        </div>
+    </section>
+    <!-- END  PROYEK -->
+
+    <!-- KEUNGGULAN -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <span class="subtitle">WHY CHOOSE US</span>
+                <h2 data-id="Keunggulan Kami" data-en="Our Advantages">Keunggulan Kami</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-number">01</div>
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 data-id="Material Berkualitas" data-en="Quality Material">Material Berkualitas</h3>
+                    <p data-id="Kami hanya menggunakan material standar SNI untuk menjamin ketahanan bangunan jangka panjang."
+                        data-en="We only use SNI standard materials to ensure long-term building durability.">
+                        Kami hanya menggunakan material standar SNI untuk menjamin ketahanan bangunan jangka panjang.
+                    </p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-number">02</div>
+                    <div class="feature-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 data-id="Tim Profesional" data-en="Professional Team">Tim Profesional</h3>
+                    <p data-id="Dikerjakan oleh arsitek dan tukang berpengalaman yang ahli di bidangnya masing-masing."
+                        data-en="Executed by experienced architects and craftsmen who are experts in their respective fields.">
+                        Dikerjakan oleh arsitek dan tukang berpengalaman yang ahli di bidangnya masing-masing.
+                    </p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-number">03</div>
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 data-id="Tepat Waktu" data-en="On Time">Tepat Waktu</h3>
+                    <p data-id="Manajemen proyek yang ketat memastikan pembangunan selesai sesuai jadwal yang disepakati."
+                        data-en="Strict project management ensures construction is completed according to the agreed schedule.">
+                        Manajemen proyek yang ketat memastikan pembangunan selesai sesuai jadwal yang disepakati.
+                    </p>
+                </div>
+
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-number">04</div>
+                    <div class="feature-icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 data-id="Harga Kompetitif" data-en="Competitive Price">Harga Kompetitif</h3>
+                    <p data-id="Anggaran transparan dan efisien tanpa mengurangi kualitas hasil akhir bangunan."
+                        data-en="Transparent and efficient budget without compromising the quality of the final building.">
+                        Anggaran transparan dan efisien tanpa mengurangi kualitas hasil akhir bangunan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END KEUNGGULAN -->
+    <!-- LAYANAN KAMI -->
+    <section class="services" id="services">
+        <div class="section-title" data-aos="fade-up">
+            <h2>Layanan Kami</h2>
+            <div class="line"></div>
+        </div>
+        <div class="service-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-hard-hat"></i>
+                <h3>Konstruksi Sipil</h3>
+                <p>Pembangunan gedung bertingkat dengan standar keamanan internasional.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-drafting-compass"></i>
+                <h3>Desain Arsitektur</h3>
+                <p>Visualisasi 3D dan perencanaan ruang yang estetis serta fungsional.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-tools"></i>
+                <h3>Renovasi</h3>
+                <p>Mengubah bangunan lama menjadi hunian modern impian Anda.</p>
+            </div>
+        </div>
+    </section>
+    <!-- END LAYANAN -->
+
+
+    <!-- PORTOFOLIO -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <span class="subtitle">PROJECTS</span>
+                <h2 data-id="Proyek Terbaru Kami" data-en="Our Latest Projects">Proyek Terbaru Kami</h2>
+                <div class="line"></div>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800"
+                        alt="Luxury Villa">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span>Residential</span>
+                            <h3>Modern Luxury Villa</h3>
+                            <a href="#" class="view-project"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800" alt="Skyscraper">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span>Commercial</span>
+                            <h3>Skyline Corporate Tower</h3>
+                            <a href="#" class="view-project"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="300">
+                    <img src="https://images.unsplash.com/photo-1590644365607-1c5a519a7a37?q=80&w=800" alt="Interior">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span>Interior</span>
+                            <h3>Minimalist Office Space</h3>
+                            <a href="#" class="view-project"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-aos="zoom-in-up" data-aos-delay="400">
+                    <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?q=80&w=800" alt="Industrial">
+                    <div class="portfolio-overlay">
+                        <div class="portfolio-info">
+                            <span>Industrial</span>
+                            <h3>Smart Warehouse System</h3>
+                            <a href="#" class="view-project"><i class="fas fa-plus"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- WA -->
+    <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
+        <div class="pulse-ring"></div>
+        <svg width="35" height="35" viewBox="0 0 448 512" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.4 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.4-29.9-17-41.1-4.5-10.9-9.1-9.4-12.4-9.6-3.2-.1-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+        <span class="tooltip-wa">Konsultasi Gratis!</span>
+    </a>
+
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <div class="logo-footer">CONSTRUCT<span>PRO</span></div>
+                    <p class="footer-desc">
+                        Kami adalah mitra konstruksi terpercaya yang berfokus pada kualitas tinggi, ketepatan waktu, dan
+                        inovasi desain arsitektur modern di Indonesia.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="footer-title">Tautan Cepat</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Tentang Kami</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Layanan</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portofolio</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Artikel</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="footer-title">Kontak Kami</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Pembangunan No. 123, Jakarta Selatan, Indonesia</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+62 812 3456 7890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@constructpro.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 <strong>ConstructPro</strong>. All Rights Reserved. Designed for Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
