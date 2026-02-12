@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - Perusahaan Konstruksi Anda</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <div class="logo-loader">CONSTRUCT<span>PRO</span></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+    <nav id="main-nav">
+        <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="img/logo1.png" alt="Icon" class="logo-img-home">
+
+                <span class="logo-text" style="color: #f97316; font-weight: bold; font-size: 1.5rem;">CONSTRUCT
+                    PRO</span>
+            </a>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <div class="close-btn-container" id="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <li><a href="index.html" class="nav-link" data-id="Beranda" data-en="Home">Beranda</a></li>
+            <li><a href="about.html" class="nav-link" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a></li>
+            <li><a href="layanan.html" class="nav-link" data-id="Layanan" data-en="Services">Layanan</a></li>
+            <li><a href="potofolio.html" class="nav-link" data-id="Portofolio" data-en="Portfolio">Portofolio</a></li>
+
+            <li class="dropdown">
+                <span class="nav-link" data-id="Artikel" data-en="Articles">
+                    Artikel <i class="fas fa-chevron-down icon-small"></i>
+                </span>
+                <div class="dropdown-content">
+                    <a href="blog.html" data-id="Blog Konstruksi" data-en="Construction Blog">Blog Konstruksi</a>
+                    <a href="berita.html" data-id="Berita Proyek" data-en="Project News">Berita Proyek</a>
+                </div>
+            </li>
+
+            <li><a href="kontac.html" class="nav-link" data-id="Kontak" data-en="Contact">Kontak</a></li>
+
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                <i class="fas fa-search search-icon" id="search-icon"></i>
+            </div>
+
+            <button class="lang-btn" id="lang-btn">EN</button>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <!-- hero section -->
+    <section class="about-hero hero">
+        <div class="hero-content text-center">
+            <h1 class="animate-fade-in-up">Tentang <span>Kami</span></h1>
+            <p class="animate-fade-in-up-delay">Membangun Masa Depan yang Lebih Baik dengan Kualitas dan Inovasi.</p>
+            <div class="hero-btns animate-fade-in-up-delay-2">
+                <a href="#visi-misi" class="btn-primary">Lihat Visi Misi</a>
+                <a href="#tim" class="btn-outline">Kenali Tim Kami</a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section id="sejarah" class="section-padding animate-on-scroll slide-in-left">
+        <div class="container grid-2-cols">
+            <div class="sejarah-image">
+                <img src="img/rumah.jpg" alt="Sejarah Perusahaan" class="img-fluid animate-on-scroll scale-in">
+            </div>
+            <div class="sejarah-content">
+                <span class="subtitle animate-on-scroll fade-in-up">AWAL MULA KAMI</span>
+                <h2 class="section-title-left animate-on-scroll fade-in-up">Perjalanan Kami Sejak <span>2005</span>
+                </h2>
+                <p class="animate-on-scroll fade-in-up">Dimulai dari sebuah visi sederhana untuk menghadirkan
+                    kualitas terbaik dalam setiap proyek konstruksi, perusahaan kami telah tumbuh dan berkembang
+                    pesat sejak didirikan pada tahun 2005. Kami bangga atas setiap batu bata yang telah kami
+                    letakkan dan setiap fondasi yang telah kami bangun.</p>
+                <p class="animate-on-scroll fade-in-up">Dengan dedikasi yang tak tergoyahkan terhadap inovasi dan
+                    kepuasan pelanggan, kami terus berupaya menjadi mitra terpercaya dalam mewujudkan impian
+                    arsitektur Anda.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="visi-misi" class="section-padding bg-light animate-on-scroll fade-in">
+        <div class="container text-center">
+            <span class="subtitle animate-on-scroll fade-in-up">FOKUS KAMI</span>
+            <h2 class="section-title animate-on-scroll fade-in-up">Visi dan <span>Misi</span></h2>
+            <div class="line animate-on-scroll fade-in-up"></div>
+            <div class="grid-2-cols-gap animate-on-scroll fade-in-up-delay">
+                <div class="card card-icon-top">
+                    <i class="fas fa-eye animate-on-scroll zoom-in"></i>
+                    <h3>Visi Kami</h3>
+                    <p>Menjadi pemimpin industri konstruksi yang inovatif dan terpercaya, memberikan solusi
+                        konstruksi berkelanjutan yang melampaui ekspektasi klien.</p>
+                </div>
+                <div class="card card-icon-top">
+                    <i class="fas fa-bullseye animate-on-scroll zoom-in-delay"></i>
+                    <h3>Misi Kami</h3>
+                    <ul>
+                        <li>Menyediakan layanan konstruksi berkualitas tinggi dengan standar keselamatan dan etika
+                            tertinggi.</li>
+                        <li>Mengembangkan tim profesional yang berdedikasi dan memiliki keahlian tinggi.</li>
+                        <li>Mengadopsi teknologi dan metode konstruksi terbaru untuk efisiensi dan keunggulan.</li>
+                        <li>Membangun hubungan jangka panjang dengan klien berdasarkan kepercayaan dan integritas.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nilai" class="section-padding animate-on-scroll slide-in-right">
+        <div class="container text-center">
+            <span class="subtitle animate-on-scroll fade-in-up">PRINSIP KAMI</span>
+            <h2 class="section-title animate-on-scroll fade-in-up">Nilai-nilai <span>Perusahaan</span></h2>
+            <div class="line animate-on-scroll fade-in-up"></div>
+            <div class="grid-3-cols-gap animate-on-scroll fade-in-up-delay-2">
+                <div class="card card-icon-left">
+                    <i class="fas fa-lightbulb"></i>
+                    <h4>Inovasi</h4>
+                    <p>Terus mencari cara baru dan lebih baik untuk membangun, memberikan solusi kreatif.</p>
+                </div>
+                <div class="card card-icon-left">
+                    <i class="fas fa-handshake"></i>
+                    <h4>Integritas</h4>
+                    <p>Berkomitmen pada transparansi, kejujuran, dan etika profesional di setiap langkah.</p>
+                </div>
+                <div class="card card-icon-left">
+                    <i class="fas fa-trophy"></i>
+                    <h4>Kualitas</h4>
+                    <p>Mengutamakan keunggulan dalam setiap detail, dari perencanaan hingga penyelesaian.</p>
+                </div>
+                <div class="card card-icon-left">
+                    <i class="fas fa-users"></i>
+                    <h4>Kolaborasi</h4>
+                    <p>Bekerja sama secara efektif, menghargai setiap kontribusi untuk hasil terbaik.</p>
+                </div>
+                <div class="card card-icon-left">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Keamanan</h4>
+                    <p>Prioritas utama kami adalah keselamatan kerja untuk seluruh tim dan lingkungan proyek.</p>
+                </div>
+                <div class="card card-icon-left">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Keberlanjutan</h4>
+                    <p>Membangun dengan tanggung jawab lingkungan dan sosial untuk masa depan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tim" class="section-padding bg-light animate-on-scroll fade-in">
+        <div class="container text-center">
+            <span class="subtitle animate-on-scroll fade-in-up">MEET THE TEAM</span>
+            <h2 class="section-title animate-on-scroll fade-in-up">Tim <span>Ahli</span> Kami</h2>
+            <div class="line animate-on-scroll fade-in-up"></div>
+            <div class="grid-team animate-on-scroll fade-in-up-delay-2">
+                <div class="team-card animate-on-scroll zoom-in-slow">
+                    <img src="https://images.unsplash.com/photo-1587569140416-247ce7305988?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Anggota Tim 1">
+                    <h3>John Doe</h3>
+                    <p>CEO & Pendiri</p>
+                    <div class="social-links-team">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="team-card animate-on-scroll zoom-in-slow-delay">
+                    <img src="https://images.unsplash.com/photo-1610216705708-54b35e82f716?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Anggota Tim 2">
+                    <h3>Jane Smith</h3>
+                    <p>Manajer Proyek Senior</p>
+                    <div class="social-links-team">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="team-card animate-on-scroll zoom-in-slow-delay-2">
+                    <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Anggota Tim 3">
+                    <h3>Robert Johnson</h3>
+                    <p>Kepala Insinyur</p>
+                    <div class="social-links-team">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- WA -->
+    <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
+        <div class="pulse-ring"></div>
+        <svg width="35" height="35" viewBox="0 0 448 512" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.4 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.4-29.9-17-41.1-4.5-10.9-9.1-9.4-12.4-9.6-3.2-.1-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.8 23.5 9.2 31.5 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+        </svg>
+        <span class="tooltip-wa">Konsultasi Gratis!</span>
+    </a>
+
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <div class="logo-footer">CONSTRUCT<span>PRO</span></div>
+                    <p class="footer-desc">
+                        Kami adalah mitra konstruksi terpercaya yang berfokus pada kualitas tinggi, ketepatan waktu, dan
+                        inovasi desain arsitektur modern di Indonesia.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="footer-title">Tautan Cepat</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Beranda</a></li>
+                        <li><a href="#about"><i class="fas fa-chevron-right"></i> Tentang Kami</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Layanan</a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Portofolio</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Artikel</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="footer-title">Kontak Kami</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Pembangunan No. 123, Jakarta Selatan, Indonesia</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+62 812 3456 7890</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@constructpro.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 <strong>ConstructPro</strong>. All Rights Reserved. Designed for Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // JavaScript untuk Animasi On Scroll
+        const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                } else {
+                    // Opsional: Hapus kelas 'animated' jika elemen keluar viewport
+                    // entry.target.classList.remove('animated'); 
+                }
+            });
+        }, {
+            threshold: 0.2 // Elemen akan teranimasi saat 20% terlihat
+        });
+
+        animateOnScrollElements.forEach(element => {
+            observer.observe(element);
+        });
+
+        // Tambahan untuk menyembunyikan loader (jika ada)
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader');
+            if (loader) {
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 500);
+            }
+        });
+    </script>
+</body>
+
+</html>

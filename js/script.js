@@ -45,13 +45,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Close menu when clicking any nav link
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
+    // Perbaikan supaya Artikel GAK nutup hamburger dan munculin sub-menu
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
+        // Kalau yang diklik itu bagian dari dropdown (Artikel), jangan tutup hamburger!
+        if (link.closest('.dropdown')) {
+            e.preventDefault(); // Biar gak loncat ke atas
+            e.stopPropagation(); // Stop perintah nutup hamburger
+            link.parentElement.classList.toggle('buka'); // Munculin sub-menu
+        } else {
+            // Kalau klik menu lain (Beranda, dll), baru tutup
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
-        });
+        }
     });
+});
 });
 // NAVBAR TRANSPARAN
     const navbar = document.querySelector('nav');
@@ -139,3 +147,56 @@ document.addEventListener('DOMContentLoaded', () => {
     counters.forEach(c => observer.observe(c));
 });
 
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+
+    // Opsional: Kunci scroll body pas menu kebuka biar gak lari-lari
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+});
+
+
+// Gunakan window agar radar lebih luas menjangkau seluruh layar
+window.addEventListener('click', function(e) {
+    const hamburger = document.querySelector('#hamburger');
+    const navMenu = document.querySelector('#nav-menu');
+
+    // Cek apakah menu sedang terbuka
+    if (navMenu.classList.contains('active')) {
+        
+        /* LOGIKA: 
+           Jika yang diklik BUKAN hamburger, 
+           DAN yang diklik BUKAN isi dari navMenu,
+           MAKA tutup menu.
+        */
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            
+            // Aktifkan kembali scroll body
+            document.body.style.overflow = 'auto';
+            console.log("Menu ditutup karena klik di luar area");
+        }
+    }
+});
+
+//
+
+// Gunakan event delegation supaya pasti kena targetnya
+document.addEventListener('click', function(e) {
+    const navMenu = document.querySelector('#nav-menu');
+    const hamburger = document.querySelector('#hamburger');
+    
+    // 1. CEK: Apakah yang diklik itu tombol X atau icon di dalam tombol X?
+    if (e.target.closest('#close-menu')) {
+        console.log("Tombol X diklik!");
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+});
