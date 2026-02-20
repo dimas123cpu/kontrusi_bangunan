@@ -999,7 +999,7 @@ nav.scrolled .logo-img-home {
 
 /* Card Icon Left */
 .card-icon-left {
-    display: flex;
+    display: block;
     text-align: left;
     gap: 20px;
     align-items: flex-start;
@@ -1027,7 +1027,7 @@ nav.scrolled .logo-img-home {
 /* --- Team Cards --- */
 .team-card {
     background: var(--white);
-    border-radius: 12px;
+    border-radius: 15px;
     overflow: hidden;
     text-align: center;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -1039,7 +1039,7 @@ nav.scrolled .logo-img-home {
 }
 .team-card img {
     width: 100%;
-    height: 250px;
+    height: 500px;
     object-fit: cover;
     display: block;
 }
@@ -1075,6 +1075,8 @@ nav.scrolled .logo-img-home {
     background: var(--accent);
     color: var(--white);
 }
+
+
 
 /* --- ANIMASI --- */
 /* Base state (sebelum animasi) */
@@ -1208,6 +1210,8 @@ nav.scrolled .logo-img-home {
 }
 
 
+
+
 /* --- Responsive Adjustments --- */
 @media (max-width: 768px) {
     .grid-2-cols {
@@ -1257,120 +1261,72 @@ nav.scrolled .logo-img-home {
 }
 
 /* LAYANAN KAMI */
-/* --- SERVICES PAGE SPECIFIC --- */
-
-.service-main-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
-
-.service-item {
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 20px;
-    border: 1px solid #e2e8f0;
-    transition: all 0.4s ease;
-    text-align: left;
+/* Container Utama Hero */
+.hero.about-hero {
+    height: 60vh; /* Tinggi hero tidak full, tapi cukup luas */
+    min-height: 400px;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    align-items: flex-end; /* Paksa konten ke bagian bawah */
+    padding-bottom: 50px;  /* Jarak dari tepi bawah layar */
+    background-color: #222; /* Fallback warna */
 }
 
-.service-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Pembungkus Konten di Bawah */
+.hero-bottom-wrap {
     width: 100%;
-    height: 4px;
-    background: var(--accent);
-    transform: scaleX(0);
-    transition: transform 0.4s ease;
 }
 
-.service-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-}
-
-.service-item:hover::before {
-    transform: scaleX(1);
-}
-
-.service-icon-box {
-    width: 70px;
-    height: 70px;
-    background: #fff7ed;
-    color: var(--accent);
+.hero-bottom-content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    font-size: 2rem;
-    margin-bottom: 25px;
-    transition: 0.3s;
+    justify-content: space-between; /* Kiri untuk H1, Kanan untuk P */
+    align-items: flex-end;         /* Sejajar di bagian bawah */
+    gap: 40px;
 }
 
-.service-item:hover .service-icon-box {
-    background: var(--accent);
+/* Judul (Kiri Bawah) */
+.hero-bottom-content h1 {
+    font-size: clamp(1rem, 5vw, 2rem);
     color: #fff;
+    margin: 0;
+    text-align: left;
+    line-height: 1.1;
+    flex: 1; /* Biar fleksibel */
 }
 
-.service-item h3 {
-    color: var(--primary);
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+.hero-bottom-content h1 span {
+    color: #f97316; /* Warna oranye Construct Pro */
 }
 
-.service-item p {
-    color: #64748b;
-    font-size: 0.95rem;
+/* Deskripsi (Kanan Bawah) */
+.hero-bottom-content p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 400px; /* Batasi lebar teks kanan agar rapi */
+    margin: 0;
+    text-align: right;
     line-height: 1.6;
-    margin-bottom: 20px;
+    padding-bottom: 10px; /* Penyesuaian biar sejajar garis dasar font h1 */
 }
 
-.service-points {
-    list-style: none;
-    padding: 0;
-}
-
-.service-points li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--primary);
-    margin-bottom: 8px;
-}
-
-.service-points li i {
-    color: var(--accent);
-    font-size: 1rem;
-}
-
-/* Biar Hero Layanan dapet animasi langsung muncul (karena di paling atas) */
-.services-hero .animate-fade-in-up {
-    animation: fadeInUp 0.8s ease forwards;
-}
-.services-hero .animate-fade-in-up-delay {
-    animation: fadeInUp 0.8s ease forwards 0.3s;
-    opacity: 0;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
+/* RESPONSIVE: Di HP kita tumpuk lagi biar gak berantakan */
+@media (max-width: 768px) {
+    .hero-bottom-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    
+    .hero-bottom-content p {
+        text-align: left;
+        max-width: 100%;
+    }
+    
+    .hero.about-hero {
+        height: auto;
+        padding-top: 150px; /* Jarak dari navbar */
     }
 }
-
-/* --- ANIMASI LAYANAN MEMUKAU --- */
 /* Container Grid */
 .service-main-grid {
     display: grid;
@@ -1460,20 +1416,4 @@ nav.scrolled .logo-img-home {
     transform: translateY(-10px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
     border-color: var(--accent);
-}
-
-/* Menghapus jarak antara Hero dan Konten di bawahnya */
-.hero.about-hero {
-    margin-bottom: 0 !important; /* Pastikan tidak ada jarak bawah di hero */
-}
-
-.services-grid-section {
-    padding-top: 0px !important; /* Kecilkan angka ini (misal 20px atau 0) sampai jaraknya pas */
-    margin-top: 0 !important;
-}
-
-/* Jika lo pakai tag <main> atau container yang punya margin */
-main {
-    display: flex;
-    flex-direction: column;
 }
