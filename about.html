@@ -4,11 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tentang Kami - Perusahaan Konstruksi Anda</title>
+    <title>Tentang Kami</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
@@ -21,10 +24,7 @@
     <nav id="main-nav">
         <div class="logo">
             <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-                <img src="img/PARTA.png" alt="Icon" class="logo-img-home">
-
-                <span class="logo-text" style="color: #f97316; font-weight: bold; font-size: 1.5rem;">CONSTRUCT
-                    PRO</span>
+                <img src="img/PARTA.png" alt="Icon" class="logo-img-home" style="width: 80px;">
             </a>
         </div>
         <ul class="nav-menu" id="nav-menu">
@@ -33,8 +33,41 @@
             </div>
             <li><a href="index.html" class="nav-link" data-id="Beranda" data-en="Home">Beranda</a></li>
             <li><a href="about.html" class="nav-link" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a></li>
-            <li><a href="layanan.html" class="nav-link" data-id="Layanan" data-en="Services">Layanan</a></li>
-            <li><a href="potofolio.html" class="nav-link" data-id="Portofolio" data-en="Portfolio">Portofolio</a></li>
+            <li class="dropdown">
+                <span class="nav-link" data-id="Artikel" data-en="Articles">
+                    layanan <i class="fas fa-chevron-down icon-small"></i>
+                </span>
+                <div class="dropdown-content">
+                    <div class="has-submenu">
+                        <div class="submenu-trigger">
+                            <span class="menu-text">Rumah Hunian</span>
+                            <i class="fas fa-chevron-right mobile-arrow"></i>
+                        </div>
+                        <div class="sub-dropdown">
+                            <a href="bangun_rumah.html">Jasa Bangun Rumah</a>
+                            <a href="renovasi.html">Jasa Renovasi Rumah</a>
+                            <a href="disain_interior.html">Jasa Interior Rumah</a>
+                            <a href="pagar_kanopi.html">Jasa Pagar & Kanopi</a>
+                        </div>
+                    </div>
+
+                    <div class="has-submenu">
+                        <div class="submenu-trigger">
+                            <span class="menu-text">Perusahaan (B2B)</span>
+                            <i class="fas fa-chevron-right mobile-arrow"></i>
+                        </div>
+                        <div class="sub-dropdown">
+                            <a href="renovasi_kantor.html">Jasa Renovasi Kantor</a>
+                            <a href="gedung.html">Jasa Bangun Bangunan Komersial</a>
+                            <a href="fit_out.html">Jasa Fit Out Kantor & Ruko</a>
+                            <a href="interior_kantor.html">Jasa Interior Kantor</a>
+                            <a href="konstruksi_baja.html">Jasa Konstruksi Baja</a>
+                        </div>
+                    </div>
+                    <a href="layanan.html">Semua Layanan</a>
+                </div>
+            </li>
+            <li><a href="portofolio.html" class="nav-link" data-id="Portofolio" data-en="Portfolio">Portofolio</a></li>
 
             <li class="dropdown">
                 <span class="nav-link" data-id="Artikel" data-en="Articles">
@@ -46,7 +79,7 @@
                 </div>
             </li>
 
-            <li><a href="kontac.html" class="nav-link" data-id="Kontak" data-en="Contact">Kontak</a></li>
+            <li><a href="kontak.html" class="nav-link" data-id="Kontak" data-en="Contact">Kontak</a></li>
 
             <div class="search-container">
                 <input type="text" class="search-input" id="search-input" placeholder="Search...">
@@ -63,10 +96,11 @@
         </div>
     </nav>
 
+    <!-- HERO SECTION -->
     <section class="hero about-hero">
         <div class="container hero-bottom-wrap">
             <div class="hero-bottom-content">
-                <h1 class="animate-fade-in-up">Tentang <span>Kami</span></h1>
+                <h1 class="animate-fade-in-up">Layanan <span>Kami</span></h1>
                 <p class="animate-fade-in-up-delay">Membangun Masa Depan yang Lebih Baik dengan Kualitas dan Inovasi.
                 </p>
             </div>
@@ -74,122 +108,126 @@
     </section>
 
 
-    <section id="sejarah" class="section-padding animate-on-scroll slide-in-left">
-        <div class="container grid-2-cols">
-            <div class="sejarah-image">
-                <img src="img/rumah.jpg" alt="Sejarah Perusahaan" class="img-fluid animate-on-scroll scale-in">
-            </div>
-            <div class="sejarah-content">
-                <span class="subtitle animate-on-scroll fade-in-up">AWAL MULA KAMI</span>
-                <h2 class="section-title-left animate-on-scroll fade-in-up">Perjalanan & Dedikasi <span>Kami</span>
-                </h2>
-                <p class="animate-on-scroll fade-in-up">Berawal dari komitmen untuk menghadirkan kualitas terbaik dalam
-                    setiap proyek konstruksi, kami terus berkembang dan dipercaya menangani berbagai pembangunan hunian,
-                    komersial, dan proyek skala besar.
-                </p>
-                <p class="animate-on-scroll fade-in-up">Setiap proyek menjadi fondasi yang memperkuat reputasi kami
-                    sebagai mitra konstruksi yang
-                    profesional dan dapat diandalkan.</p>
-            </div>
-        </div>
-    </section>
+    <section class="profil-section">
+        <div class="container">
+            <div class="profil-flex">
+                <div class="profil-image-side">
+                    <div class="arch-frame"></div>
+                    <div class="main-img-box">
+                        <img src="img/img11.jpeg" alt="Proyek Hunian">
+                    </div>
+                    <div class="small-img-box">
+                        <img src="img/img6.jpg" alt="Detail Hunian">
+                    </div>
+                </div>
 
-    <section id="visi-misi" class="section-padding bg-light animate-on-scroll fade-in">
-        <div class="container text-center">
-            <span class="subtitle animate-on-scroll fade-in-up">FOKUS KAMI</span>
-            <h2 class="section-title animate-on-scroll fade-in-up">Visi dan <span>Misi</span></h2>
-            <div class="line animate-on-scroll fade-in-up"></div>
-            <div class="grid-2-cols-gap animate-on-scroll fade-in-up-delay">
-                <div class="card card-icon-top">
-                    <i class="fas fa-eye animate-on-scroll zoom-in"></i>
-                    <h3>Visi Kami</h3>
-                    <p>Menjadi perusahaan general kontraktor terpercaya dan profesional yang menghadirkan solusi
-                        konstruksi berkualitas, tepat waktu, dan bernilai tinggi bagi sektor hunian, bisnis, dan proyek
-                        skala besar di Indonesia.
+                <div class="profil-text-side">
+                    <span class="sub-headline">SEJAK</span>
+                    <div class="headline-group">
+                        <h2 class="year-text">2012</h2>
+                        <div class="headline-desc">
+                            <span class="highlight-years">14 Tahun</span>
+                            <h3>Mewujudkan <span>Hunian</span></h3>
+                        </div>
+                    </div>
+
+                    <p class="profil-desc">
+                        Kami hadir sebagai mitra terpercaya dalam jasa renovasi rumah dan bangunan di berbagai wilayah.
+                        Kami mengutamakan perencanaan matang, tenaga profesional, dan hasil kerja presisi untuk
+                        mewujudkan hunian impian Anda.
                     </p>
-                </div>
-                <div class="card card-icon-top">
-                    <i class="fas fa-bullseye animate-on-scroll zoom-in-delay"></i>
-                    <h3>Misi Kami</h3>
-                    <ul>
-                        <li>Menyediakan layanan konstruksi terpadu (Design & Build, General Contractor, dan Manajemen
-                            Konstruksi) dengan standar kualitas terbaik.</li>
-                        <li>Mewujudkan pembangunan yang tepat waktu, transparan, dan sesuai anggaran.</li>
-                        <li>Mengutamakan kepuasan klien melalui pelayanan profesional dan komunikasi yang efektif.</li>
-                        <li>Menerapkan sistem kerja yang efisien, aman, dan berorientasi pada hasil.
-                        </li>
-                        <li>Membangun tim yang kompeten, berintegritas, dan berkomitmen terhadap kualitas.</li>
-                        <li>Mendukung pembangunan berkelanjutan dengan penggunaan material dan metode kerja yang
-                            bertanggung jawab.</li>
 
-                    </ul>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <h4 class="counter" data-target="15">0</h4><span>+</span>
+                            <p>Mitra</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="counter" data-target="188">0</h4><span>+</span>
+                            <p>Pelanggan</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4 class="counter" data-target="50">0</h4>
+                            <p>Pekerja</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="nilai" class="section-padding animate-on-scroll slide-in-right">
-        <div class="container text-center">
-            <span class="subtitle animate-on-scroll fade-in-up">PRINSIP KAMI</span>
-            <h2 class="section-title animate-on-scroll fade-in-up">Nilai-nilai <span>Perusahaan</span></h2>
-            <div class="line animate-on-scroll fade-in-up"></div>
-            <div class="grid-3-cols-gap animate-on-scroll fade-in-up-delay-2">
-                <div class="card card-icon-left">
-                    <i class="fas fa-lightbulb"></i>
-                    <h4>Inovasi</h4>
-                    <p>Terus mencari cara baru dan lebih baik untuk membangun, memberikan solusi kreatif.</p>
+
+    <section class="profile-section">
+        <div class="container">
+            <div class="flex-wrapper">
+                <div class="image-area">
+                    <div class="decorative-frame"></div>
+                    <div class="image-box">
+                        <img src="img/img1.jpg" alt="Visi Misi">
+                    </div>
                 </div>
-                <div class="card card-icon-left">
-                    <i class="fas fa-handshake"></i>
-                    <h4>Integritas</h4>
-                    <p>Berkomitmen pada transparansi, kejujuran, dan etika profesional di setiap langkah.</p>
+
+                <div class="text-area">
+                    <div class="vm-group">
+                        <h2>Visi</h2>
+                        <p>Menjadi perusahaan general kontraktor terpercaya dan profesional yang menghadirkan solusi
+                            konstruksi berkualitas, tepat waktu, dan bernilai tinggi bagi sektor hunian, bisnis, dan
+                            proyek skala besar di Indonesia.</p>
+                    </div>
+
+                    <div class="vm-group">
+                        <h2>Misi</h2>
+                        <ul class="clean-list">
+                            <li>Menyediakan layanan konstruksi terpadu dengan standar kualitas terbaik.</li>
+                            <li>Mewujudkan pembangunan yang tepat waktu, transparan, dan sesuai anggaran.</li>
+                            <li>Mengutamakan kepuasan klien melalui pelayanan profesional dan komunikasi efektif.</li>
+                            <li>Menerapkan sistem kerja yang efisien, aman, dan berorientasi pada hasil.</li>
+                            <li>Membangun tim yang kompeten, berintegritas, dan berkomitmen terhadap kualitas.</li>
+                            <li>Mendukung pembangunan berkelanjutan dengan penggunaan material yang bertanggung jawab.
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="card card-icon-left">
-                    <i class="fas fa-trophy"></i>
-                    <h4>Kualitas</h4>
-                    <p>Mengutamakan keunggulan dalam setiap detail, dari perencanaan hingga penyelesaian.</p>
+            </div>
+        </div>
+    </section>
+    <section id="tentang-kami" class="section-padding">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-text reveal">
+                    <h2 class="section-title">Membangun Dengan <span>Hati & Keahlian</span></h2>
+                    <p>Didirikan dengan visi menjadi mitra konstruksi terpercaya, kami telah berpengalaman lebih dari 10
+                        tahun dalam mewujudkan hunian impian dan infrastruktur bisnis di berbagai wilayah. Kami
+                        mengutamakan transparansi, kualitas material, dan ketepatan waktu dalam setiap proyek.</p>
+                    <p>Kekuatan kami terletak pada tim profesional yang dipimpin oleh individu-individu berpengalaman di
+                        bidangnya.</p>
                 </div>
-                <div class="card card-icon-left">
-                    <i class="fas fa-users"></i>
-                    <h4>Kolaborasi</h4>
-                    <p>Bekerja sama secara efektif, menghargai setiap kontribusi untuk hasil terbaik.</p>
-                </div>
-                <div class="card card-icon-left">
-                    <i class="fas fa-shield-alt"></i>
-                    <h4>Keamanan</h4>
-                    <p>Prioritas utama kami adalah keselamatan kerja untuk seluruh tim dan lingkungan proyek.</p>
-                </div>
-                <div class="card card-icon-left">
-                    <i class="fas fa-leaf"></i>
-                    <h4>Keberlanjutan</h4>
-                    <p>Membangun dengan tanggung jawab lingkungan dan sosial untuk masa depan.</p>
+
+                <div class="team-grid">
+                    <div class="team-card reveal delay-1">
+                        <div class="team-img-wrapper">
+                            <img src="img/Derektur.jpeg" alt="Direktur Utama">
+                        </div>
+                        <div class="team-info">
+                            <h3>Budi Santoso, S.T.</h3>
+                            <span>Direktur Utama</span>
+                        </div>
+                    </div>
+
+                    <div class="team-card reveal delay-2">
+                        <div class="team-img-wrapper">
+                            <img src="img/manajer.jpeg" alt="Manajer Proyek">
+                        </div>
+                        <div class="team-info">
+                            <h3>Ir. Siti Aminah, M.B.A.</h3>
+                            <span>Manajer Proyek</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="tim" class="section-padding bg-light animate-on-scroll fade-in">
-        <div class="container text-center">
-            <span class="subtitle animate-on-scroll fade-in-up">MEET THE TEAM</span>
-            <h2 class="section-title animate-on-scroll fade-in-up">Tim <span>Ahli</span> Kami</h2>
-            <div class="line animate-on-scroll fade-in-up"></div>
-            <div class="grid-team animate-on-scroll fade-in-up-delay-2">
-                <div class="team-card animate-on-scroll zoom-in-slow">
-                    <img src="img/Derektur.jpeg" alt="Anggota Tim 1">
-                    <h3>Nur Jihan Nadif</h3>
-                    <p>Diretur</p>
-
-                </div>
-                <div class="team-card animate-on-scroll zoom-in-slow-delay">
-                    <img src="img/manajer.jpeg" alt="Anggota Tim 2">
-                    <h3>Dimas Fauzi</h3>
-                    <p>Manajer </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    </main>
 
     <!-- WA -->
     <a href="https://wa.me/6281234567890" class="whatsapp-float" target="_blank">
@@ -259,36 +297,38 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-        // JavaScript untuk Animasi On Scroll
-        const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // Semakin besar angka, semakin lambat
 
+        const startCounter = () => {
+            counters.forEach(counter => {
+                const updateCount = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const inc = target / speed;
+
+                    if (count < target) {
+                        counter.innerText = Math.ceil(count + inc);
+                        setTimeout(updateCount, 15);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCount();
+            });
+        };
+
+        // Menjalankan animasi saat elemen terlihat di layar (Scroll)
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                } else {
-                    // Opsional: Hapus kelas 'animated' jika elemen keluar viewport
-                    // entry.target.classList.remove('animated'); 
+                    startCounter();
+                    observer.unobserve(entry.target);
                 }
             });
-        }, {
-            threshold: 0.2 // Elemen akan teranimasi saat 20% terlihat
-        });
+        }, { threshold: 0.5 });
 
-        animateOnScrollElements.forEach(element => {
-            observer.observe(element);
-        });
-
-        // Tambahan untuk menyembunyikan loader (jika ada)
-        window.addEventListener('load', () => {
-            const loader = document.getElementById('loader');
-            if (loader) {
-                loader.style.opacity = '0';
-                setTimeout(() => {
-                    loader.style.display = 'none';
-                }, 500);
-            }
-        });
+        observer.observe(document.querySelector('.stats-grid'));
     </script>
 </body>
 

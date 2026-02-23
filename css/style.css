@@ -562,7 +562,7 @@ nav.scrolled .bar {
 .hero {
     height: 100vh;
    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), 
-            url('../img/black.jpg') center / cover;
+            url('../img/img11.jpeg') center / cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -580,12 +580,58 @@ nav.scrolled .bar {
 .btn-primary { background: #f97316; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; }
 .btn-outline { border: 2px solid white; color: white; padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; }
 .btn-primary:hover { background: #ea580c; transform: translateY(-3px); }
-.btn-outline:hover { background: rgb(255, 255, 255); color: #000000; }
+.btn-outline:hover { background: rgb(255, 255, 255); color: #ffffff; }*/
+
 
 /* --- Stats & Services --- */
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); background: white; padding: 50px 8%; text-align: center; gap: 30px; }
+.stats { display: grit; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); background: white; padding: 50px 8%; text-align: center; gap: 30px; }
 .stat-item h2 { font-size: 3rem; color: #0f172a; margin-bottom: 10px; }
 .stat-item p { color: #64748b; font-weight: 600; }
+
+/* PROYEK */
+.stats-section {
+    background: #ffffff;
+    padding: 80px 0;
+}
+
+.stats-wrapper {
+    display: flex;
+    justify-content: space-around; /* Memberikan ruang antar item */
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.stat-item {
+    flex: 1;
+}
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #1e293b; /* Warna gelap profesional */
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .stats-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+
+
+
 
 .services { padding: 100px 8%; background: #f8fafc; }
 .section-title { text-align: center; margin-bottom: 60px; }
@@ -606,8 +652,9 @@ nav.scrolled .bar {
     font-variant-numeric: tabular-nums; 
 }
 
+
 .stat-item {
-    text-align: center;
+    text-align:center;
     padding: 20px;
 }
 
@@ -1840,4 +1887,986 @@ nav.scrolled .logo-img-home {
         height: auto;
         padding-top: 150px; /* Jarak dari navbar */
     }
+}
+
+/* Menargetkan gambar logo di navbar */
+.logo-img-home {
+    width: 60px;       /* Ubah angka ini untuk membesarkan (misal: 80px atau 100px) */
+    height: auto;      /* Menjaga proporsi logo agar tidak gepeng */
+    transition: transform 0.3s ease; /* Opsional: agar halus saat ada perubahan */
+}
+
+/* Jika kamu ingin logo membesar sedikit saat kursor diarahkan ke sana */
+.logo-img-home:hover {
+    transform: scale(1.1);
+}
+
+/* Mengubah tombol Lihat Layanan menjadi tidak transparan */
+.btn-outline {
+  display: inline-block;
+    padding: 12px 30px;
+    background-color: #ffffff; /* Mengubah latar menjadi putih padat */
+    color: #1e293b !important;  /* Mengubah warna teks menjadi gelap agar terbaca */
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Efek Hover: Menambahkan sedikit interaksi saat disentuh */
+.btn-outline:hover {
+    background-color: #f1f5f9; /* Putih sedikit abu-abu saat di-hover */
+    border-color: #f1f5f9;
+    transform: translateY(-2px); /* Memberikan efek mengangkat */
+}
+
+
+/* Styling Dasar Navigasi */
+.nav-menu, .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #1e293b;
+}
+
+.about-text p {
+    color: #64748b;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+/* Team Cards */
+.team-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.team-card {
+    flex: 1;
+    background: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s ease;
+    text-align: center;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.team-img-wrapper {
+    height: 250px;
+    overflow: hidden;
+}
+
+.team-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-card:hover img {
+    transform: scale(1.05);
+}
+
+.team-info {
+    padding: 20px;
+}
+
+.team-info h3 {
+    font-size: 1.1rem;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.team-info span {
+    color: #ff6b00; /* Warna aksen oranye */
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Responsif */
+@media (max-width: 992px) {
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+    .team-grid {
+        justify-content: center;
+    }
+}
+
+/*-- MISI VISI --*/
+/* --- Global Reset untuk Mencegah Hilang --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    opacity: 1 !important; /* Memaksa body tetap terlihat */
+}
+
+.profile-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.flex-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* Jarak antara gambar dan teks */
+}
+
+/* --- Style Gambar & Bingkai (Sesuai Referensi) --- */
+.image-area {
+    flex: 1;
+    position: relative;
+}
+
+.decorative-frame {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 80%;
+    height: 90%;
+    border: 2px solid #4a3728; /* Warna cokelat arsitektural */
+    z-index: 1;
+}
+
+.image-box {
+    position: relative;
+    z-index: 2;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.1);
+}
+
+.image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Style Teks (Elegan & Simpel) --- */
+.text-area {
+    flex: 1.2;
+}
+
+.vm-group {
+    margin-bottom: 50px;
+}
+
+.vm-group h2 {
+    font-size: 2.8rem;
+    color: #4a3728;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.vm-group p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    text-align: justify;
+}
+
+.clean-list {
+    list-style: none;
+    padding: 0;
+}
+
+.clean-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.clean-list li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4a3728;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* --- Animasi Masuk Sederhana (Opsional) --- */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.flex-wrapper {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Responsif Mobile */
+@media (max-width: 992px) {
+    .flex-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .decorative-frame {
+        display: none;
+    }
+    .vm-group h2 {
+        font-size: 2rem;
+    }
+}
+
+/* RUMAH HUNIAN */
+.profil-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.profil-flex {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* --- Styling Gambar (Kiri) --- */
+.profil-image-side {
+    flex: 1;
+    position: relative;
+    padding: 40px;
+}
+
+.arch-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 90%;
+    border: 8px solid #4a3728; /* Warna bingkai cokelat gelap */
+    z-index: 1;
+}
+
+.main-img-box {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.main-img-box img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    box-shadow: 20px 20px 50px rgba(0,0,0,0.15);
+}
+
+.small-img-box {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 180px;
+    z-index: 3;
+    border: 5px solid #fff;
+}
+
+.small-img-box img { width: 100%; }
+
+/* --- Styling Teks (Kanan) --- */
+.profil-text-side { flex: 1.2; }
+
+.sub-headline {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #4a3728;
+    font-size: 0.9rem;
+}
+
+.year-text {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 1;
+    color: #4a3728;
+    margin: 10px 0;
+}
+
+.headline-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.headline-desc h3 {
+    font-size: 2rem;
+    color: #4a3728;
+}
+
+.headline-desc h3 span { font-weight: 300; }
+
+.highlight-years {
+    background: #4a3728;
+    color: #fff;
+    padding: 2px 10px;
+    font-size: 0.8rem;
+}
+
+.profil-desc {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+/* --- Stats Grid --- */
+.stats-grid {
+    display: flex;
+    gap: 50px;
+}
+
+.stat-item h4 {
+    display: inline-block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #4a3728;
+    margin: 0;
+}
+
+.stat-item span {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #4a3728;
+}
+
+.stat-item p {
+    color: #888;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+
+
+/* DROPDOWN */
+/* --- Aturan Dasar untuk Desktop (Review) --- */
+.has-submenu { position: relative; }
+.sub-dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: none;
+    min-width: 200px;
+    background: #fff;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+ 
+}
+.has-submenu:hover > .sub-dropdown { display: block; }
+
+/* --- RESPONSIVE MOBILE (Layar di bawah 992px) --- */
+@media screen and (max-width: 992px) {
+    /* Membuat dropdown utama memenuhi lebar layar */
+    .dropdown-content {
+        position: static; /* Mengikuti alur vertikal mobile menu */
+        width: 100%;
+        box-shadow: none;
+        border-top: 1px solid #eee;
+    }
+
+    /* Sub-dropdown tidak lagi muncul di samping, tapi di bawahnya */
+    .sub-dropdown {
+        position: static; /* Ikut alur vertikal */
+        left: 0;
+        width: 100%;
+        padding-left: 30px; /* Memberi jarak indentasi agar terlihat seperti cabang */
+        background: #fdfdfd;
+        box-shadow: none;
+        display: none; /* Default tertutup di mobile */
+    }
+
+    /* Efek ketika di-hover di mobile, sub-menu terbuka ke bawah */
+    .has-submenu:hover > .sub-dropdown {
+        display: block;
+    }
+
+    /* Memutar icon panah ke bawah saat di mobile */
+    .mobile-arrow {
+        transform: rotate(90deg);
+        float: right;
+    }
+    
+    /* Memastikan link mobile mudah ditekan (Touch friendly) */
+    .dropdown-content a, .sub-dropdown a {
+        padding: 15px 20px;
+        border-bottom: 1px solid #f5f5f5;
+        font-weight: 500;
+        
+    }
+}
+
+.submenu-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer; /* Membuat kursor menjadi tangan */
+    color: #333;
+    font-size: 14px;
+ 
+}
+
+.submenu-trigger:hover {
+    background-color: #fff5ed;
+    color: #ff6b00;
+}
+
+/* Animasi Rotasi Panah saat Aktif */
+.has-submenu.active .mobile-arrow {
+    transform: rotate(90deg);
+    transition: 0.3s;
+}
+
+/* Sembunyikan sub-dropdown default di mobile */
+@media screen and (max-width: 992px) {
+    .sub-dropdown {
+        display: none;
+        padding-left: 15px;
+        background-color: #f9f9f9;
+    }
+    .sub-dropdown.is-open {
+        display: block;
+    }
+}
+
+
+/* PORTOFOLIO */
+.portfolio-section {
+    padding: 80px 0;
+    background-color: #fcfcfc;
+}
+
+.portfolio-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.portfolio-header h2 {
+    font-size: 36px;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+/* Grid Layout */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.portfolio-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden; /* Memastikan gambar tidak keluar batas */
+    height: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+/* Hover Effect Gambar */
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Hitam Transparan */
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+    display: flex;
+    align-items: flex-end;
+    padding: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+/* Teks di Dalam Overlay */
+.overlay-text span {
+    color: #ff6b00;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.overlay-text h3 {
+    color: #fff;
+    font-size: 22px;
+    margin: 10px 0 20px;
+}
+
+.view-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6b00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #e65a00;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* BANGUN RUMAH */
+.jasa-bangun {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+/* --- Sisi Kiri --- */
+.left-side {
+    flex: 1;
+}
+
+.image-box img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.cta-card {
+    margin-top: 30px;
+    background-color: #f1ede6; /* Warna krem sesuai gambar */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.cta-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.btn-wa {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #28a745; /* Warna hijau WA */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-wa:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+/* --- Sisi Kanan --- */
+.right-side {
+    flex: 1.5;
+}
+
+.right-side h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: #eee;
+    margin-bottom: 30px;
+}
+
+.description h3 {
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.right-side h4 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.services-list ul, .usp-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.services-list i {
+    color: #28a745;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 992px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .left-side, .right-side {
+        width: 100%;
+    }
+}
+
+/* KONTAK KAMI */
+.contact-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.contact-wrapper {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.contact-info { flex: 1; }
+.contact-form-box { flex: 1; }
+
+.contact-info h2 { font-size: 2.2rem; margin-bottom: 20px; color: #333; }
+.sub-text { color: #666; line-height: 1.6; margin-bottom: 30px; }
+
+.info-item { margin-bottom: 25px; }
+.info-item strong { display: block; margin-bottom: 5px; font-size: 1.1rem; }
+
+
+
+/* Tombol WA Hijau */
+.btn-whatsapp-large {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25d366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* List Detail Kontak */
+.contact-details { list-style: none; padding: 0; }
+.contact-details li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    color: #444;
+}
+.contact-details i { color: #d32f2f; margin-top: 5px; }
+
+/* Social Icons Box */
+.social-icons { display: flex; gap: 10px; margin-top: 30px; }
+.social-icons a {
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 5px; color: white; text-decoration: none;
+}
+
+
+/* --- Styling Form --- */
+.contact-form-box h3 { margin-bottom: 25px; font-size: 1.8rem; }
+.form-row { display: flex; gap: 20px; }
+.form-group { flex: 1; margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #333; }
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.form-group textarea { height: 150px; resize: none; }
+
+.btn-submit {
+    background-color: #d32f2f; /* Merah sesuai gambar */
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover { background-color: #b71c1c; }
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.social-btn {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    color: #ffffff !important; /* Putih bersih */
+    font-size: 26px; /* Icon lebih besar */
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Bayangan lebih tegas */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Facebook: Biru Royal yang lebih terang */
+.social-btn.fb {
+    background: #1877F2;
+    border: 1px solid #166fe5;
+}
+
+/* Instagram: Gradient warna penuh */
+.social-btn.ig {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    border: 1px solid #bc1888;
+}
+
+/* YouTube: Merah menyala */
+.social-btn.yt {
+    background: #FF0000;
+    border: 1px solid #e60000;
+}
+
+/* Efek saat kursor diarahkan (Hover) */
+.social-btn:hover {
+    transform: translateY(-8px) scale(1.1); /* Melompat lebih tinggi */
+    filter: brightness(1.2); /* Warna jadi lebih terang/glow */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Membuat icon font-awesome terlihat lebih tebal */
+.social-btn i {
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+}
+
+/* Responsif HP */
+@media (max-width: 992px) {
+    .contact-wrapper { flex-direction: column; }
+    .form-row { flex-direction: column; }
+}
+
+/* Container Tombol */
+.contact-buttons {
+    margin: 25px 0;
+}
+
+/* Styling Utama Tombol WA */
+.btn-whatsapp-large {
+    display: inline-flex;
+    align-items: center;    /* Ikon & teks sejajar vertikal */
+    justify-content: center;
+    gap: 12px;              /* Jarak presisi antara ikon dan teks */
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%); /* Warna gradient biar mewah */
+    color: #ffffff !important;
+    padding: 15px 30px;
+    border-radius: 50px;    /* Bentuk kapsul yang modern */
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    border: none;
+    box-shadow: 0 8px 15px rgba(37, 211, 102, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Ukuran Ikon WA */
+.btn-whatsapp-large i {
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    display: block; /* Menghilangkan whitespace di bawah font */
+}
+
+/* --- ANIMASI --- */
+
+/* Efek Denyut (Pulse) di Sekitar Tombol */
+.btn-whatsapp-large {
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+}
+
+/* Efek Hover (Saat Disentuh Mouse) */
+.btn-whatsapp-large:hover {
+    transform: scale(1.05) translateY(-3px); /* Tombol sedikit membesar dan naik */
+    background: linear-gradient(135deg, #21bd5c 0%, #0e7a6d 100%);
+    box-shadow: 0 12px 20px rgba(37, 211, 102, 0.4);
+}
+
+/* Efek Kilatan Cahaya (Shine) */
+.btn-whatsapp-large::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(30deg);
+    transition: all 0.5s;
+}
+
+.btn-whatsapp-large:hover::after {
+    left: 120%; /* Kilatan cahaya lewat saat di-hover */
+}
+
+/* Container Ikon Sosial Media */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    align-items: center;
+}
+
+/* Styling Dasar Tombol Sosial Media */
+.social-btn {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px; /* Sudut membulat modern */
+    color: #ffffff !important;
+    font-size: 22px;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animasi membal (bounce) */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* --- WARNA DAN GLOW KHAS BRAND --- */
+
+/* Facebook */
+.social-btn.fb {
+    background: #1877F2;
+}
+.social-btn.fb:hover {
+    box-shadow: 0 0 20px rgba(24, 119, 242, 0.6);
+}
+
+/* Instagram */
+.social-btn.ig {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.social-btn.ig:hover {
+    box-shadow: 0 0 20px rgba(214, 36, 159, 0.6);
+}
+
+/* YouTube */
+.social-btn.yt {
+    background: #FF0000;
+}
+.social-btn.yt:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+/* --- ANIMASI SAAT DI-HOVER --- */
+
+.social-btn:hover {
+    transform: translateY(-8px) scale(1.15); /* Melompat ke atas dan membesar sedikit */
+}
+
+/* Efek Kilatan (Shine) Putih yang lewat */
+.social-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: all 0.6s;
+}
+
+.social-btn:hover::before {
+    left: 100%;
+}
+
+/* Animasi ikon di dalam agar bergetar sedikit saat di-hover */
+.social-btn:hover i {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
 }
