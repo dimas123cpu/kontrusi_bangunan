@@ -2285,6 +2285,7 @@ html, body {
         width: 100%;
         box-shadow: none;
         border-top: 1px solid #eee;
+     
     }
 
     /* Sub-dropdown tidak lagi muncul di samping, tapi di bawahnya */
@@ -2316,6 +2317,7 @@ html, body {
         font-weight: 500;
         
     }
+
 }
 
 .submenu-trigger {
@@ -2350,8 +2352,19 @@ html, body {
     .sub-dropdown.is-open {
         display: block;
     }
+    /* Cari class ul atau container yang membungkus list menu Anda */
+.nav-links, .nav-menu { 
+    padding-top: 80px !important; /* Tambahkan jarak dari atas */
+    justify-content: flex-start !important; /* Paksa mulai dari atas, bukan tengah */
+    display: flex;
+    flex-direction: column;
 }
 
+/* Atau berikan margin langsung pada list item pertama */
+.nav-links li:first-child {
+    margin-top: 50px !important;
+}
+}
 
 /* PORTOFOLIO */
 .portfolio-section {
@@ -2869,4 +2882,116 @@ html, body {
     0%, 100% { transform: rotate(0deg); }
     25% { transform: rotate(-10deg); }
     75% { transform: rotate(10deg); }
+}
+
+
+/* ABOUT*/
+/* Layout Dasar */
+.profil-section {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.profil-flex {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Jarak antara gambar dan teks */
+}
+
+.profil-image-side {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.profil-text-side {
+    flex: 1;
+}
+
+/* Gambar Responsif */
+.main-img-box img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+
+.small-img-box {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    width: 200px;
+    border: 5px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.small-img-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Headline & Stats */
+.headline-group {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* --- MEDIA QUERIES (RESPONSIF HP) --- */
+
+@media (max-width: 992px) {
+    .profil-flex {
+        flex-direction: column; /* Gambar jadi di atas, teks di bawah */
+        text-align: center;
+        gap: 40px;
+    }
+
+    .profil-image-side {
+        width: 100%;
+    }
+
+    .headline-group {
+        justify-content: center;
+    }
+
+    .small-img-box {
+        width: 150px; /* Mengecilkan gambar dekorasi di tablet */
+        right: 10%;
+    }
+}
+
+@media (max-width: 576px) {
+    .profil-section {
+        padding: 50px 0;
+    }
+
+    .year-text {
+        font-size: 3rem; /* Menyesuaikan ukuran teks tahun */
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr; /* Statistik jadi berderet ke bawah di HP */
+        gap: 15px;
+    }
+
+    .small-img-box {
+        display: none; /* Sembunyikan gambar kecil di HP agar tidak berantakan */
+    }
+
+    .headline-group {
+        flex-direction: column;
+        gap: 5px;
+    }
 }
