@@ -201,3 +201,98 @@ document.addEventListener('click', function(e) {
     }
 });
 
+
+//SECRH BAR
+const searchData = [
+    // RUMAH & HUNIAN
+    { 
+        keywords: ["rumah", "bangun", "hunian", "membangun", "tempat tinggal", "villa", "kost", "kontrakan", "perumahan", "arsitektur rumah"], 
+        url: "bangun_rumah.html" 
+    },
+    
+    // RENOVASI & PERBAIKAN
+    { 
+        keywords: ["renovasi", "perbaikan", "cat", "plafon", "gypsum", "bocor", "atap", "genteng", "bongkar", "pasang keramik", "lantai", "dinding", "rembes", "bangunan lama"], 
+        url: "renovasi.html" 
+    },
+    
+    // KANTOR & KOMERSIAL
+    { 
+        keywords: ["kantor", "office", "b2b", "perusahaan", "ruko", "toko", "ruang usaha", "gedung", "komersial", "fasilitas publik", "sekolah", "rumah sakit"], 
+        url: "renovasi_kantor.html" 
+    },
+    
+    // INTERIOR & FURNITURE
+    { 
+        keywords: ["interior", "disain", "furniture", "ruangan", "meja", "kursi", "lemari", "kitchen set", "apartemen", "dekorasi", "wallpaper", "pencahayaan", "lighting"], 
+        url: "disain_interior.html" 
+    },
+    
+    // KONSTRUKSI BAJA & INDUSTRI
+    { 
+        keywords: ["baja", "gudang", "pabrik", "wf", "h-beam", "konstruksi berat", "atap baja", "rangka atap", "workshop", "hangar", "industri", "besi"], 
+        url: "konstruksi_baja.html" 
+    },
+    
+    // FIT OUT (SPESIFIK RITEL/KANTOR)
+    { 
+        keywords: ["fit out", "partisi", "sekat", "rebranding", "tenant", "mall", "outlet", "booth", "pameran"], 
+        url: "fit_out.html" 
+    },
+    
+    // PAGAR & EKSTERIOR
+    { 
+        keywords: ["pagar", "kanopi", "canopy", "carport", "tralis", "stainless", "pintu besi", "pagar minimalis", "taman", "halaman"], 
+        url: "pagar_kanopi.html" 
+    },
+    
+    // PROYEK & DOKUMENTASI
+    { 
+        keywords: ["proyek", "berita", "laporan", "lapangan", "progress", "update", "dokumentasi", "portofolio", "hasil kerja", "testimoni"], 
+        url: "berita.html" 
+    },
+    
+    // KONTAK & BANTUAN
+    { 
+        keywords: ["kontak", "alamat", "wa", "telepon", "whatsapp", "email", "lokasi", "peta", "tanya", "konsultasi", "harga", "biaya", "rab"], 
+        url: "kontak.html" 
+    },
+    
+    // PERUSAHAAN
+    { 
+        keywords: ["tentang", "profil", "perusahaan", "sejarah", "legalitas", "visi", "misi", "tim", "arsitek", "kontraktor", "pemilik"], 
+        url: "about.html" 
+    }
+];
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const searchIcon = document.getElementById('search-icon');
+
+    function executeSearch() {
+        const query = searchInput.value.toLowerCase().trim();
+        if (!query) return;
+
+        // Mencari kecocokan kata kunci
+        const result = searchData.find(item => 
+            item.keywords.some(key => query.includes(key))
+        );
+
+        if (result) {
+            // JIKA KETEMU: Langsung pindah ke halaman tersebut
+            window.location.href = result.url;
+        } else {
+            // JIKA TIDAK KETEMU: Arahkan ke halaman semua layanan agar user tidak bingung
+            alert("Hasil tidak ditemukan. Menampilkan semua layanan kami...");
+            window.location.href = "layanan.html";
+        }
+    }
+
+    // Klik Ikon
+    searchIcon.addEventListener('click', executeSearch);
+
+    // Tekan Enter
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') executeSearch();
+    });
+});
