@@ -1,3 +1,4 @@
+
 :root {
     --primary: #0f172a; 
     --accent: #f97316;  
@@ -239,7 +240,7 @@ nav.scrolled .bar {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: var(--primary);
+    background-color: var(--white);
     transition: var(--transition);
 }
 
@@ -3099,7 +3100,7 @@ html, body {
 
 .blog-card:hover {
     transform: translateY(-10px);
-    box-shadow: 15px 15px 0px var(--accent-blue); /* Shadow berubah warna saat hover */
+    box-shadow: 15px 15px 0px var(--accent); /* Shadow berubah warna saat hover */
 }
 
 .blog-img {
@@ -3207,16 +3208,16 @@ html, body {
     border: 2px solid #222;
     position: relative;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-    box-shadow: 8px 8px 0px var(--accent-blue); /* Shadow merah tegas tanpa blur */
+    box-shadow: 8px 8px 0px var(--accent); /* Shadow merah tegas tanpa blur */
 }
 
 /* Efek Hover */
 .btn-all-posts:hover {
-    background-color: var(--accent-blue); /* Berubah jadi merah */
+    background-color: var(--accent); /* Berubah jadi merah */
     border-color: #d32f2f;
     color: #fff !important;
     transform: translate(4px, 4px); /* Efek menekan tombol */
-    box-shadow: 0px 0px 0px var(--accent-blue); /* Shadow menghilang saat ditekan */
+    box-shadow: 0px 0px 0px var(--accent); /* Shadow menghilang saat ditekan */
 }
 
 /* Responsif Mobile */
@@ -3467,6 +3468,20 @@ section { padding: 100px 0; overflow: hidden; }
     cursor: pointer;
 }
 .mitra-logo:hover { filter: grayscale(0%); opacity: 1; transform: scale(1.1); }
+/* Mitra Strategis - Logo di tengah */
+.slider-container.mitra-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.mitra-logo {
+    max-height: 80px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
 
 /* Responsive */
 @media (max-width: 768px) { 
