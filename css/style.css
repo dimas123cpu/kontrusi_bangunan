@@ -997,7 +997,7 @@ nav.scrolled .bar {
 /* ARTIKEL */
 @media (max-width: 992px) {
     /* Mencegah menu tertutup secara visual */
-    .nav-menu.active { background: #ffffff !important; }
+    .nav-menu.active { background: var(--primary)!important; }
 
     /* Sembunyikan default di mobile */
     .dropdown .dropdown-content {
