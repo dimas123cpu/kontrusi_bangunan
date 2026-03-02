@@ -11,7 +11,7 @@
     --white: #ffffff;
 }
 h1 span, h2 span {
-    color:  var(--primary);
+    color:  var(--accent);
 
 }   
 
