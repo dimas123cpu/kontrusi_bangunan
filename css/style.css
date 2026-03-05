@@ -3400,12 +3400,27 @@ section { padding: 100px 0; overflow: hidden; }
 /* Judul Elegan */
 .section-title {
     font-size: 2.5rem;
-    color: var(--primary-blue);
+    color: black;
     text-align: center;
     font-weight: 800;
     margin-bottom: 60px;
 }
 .section-title span { color: var(--accent-blue); }
+.about-story { padding: 100px 0; }
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.title-main { font-size: 3rem; font-weight: 800; margin-bottom: 25px; }
+
+.check-list { margin-top: 35px; }
+.check-item { display: flex; gap: 15px; margin-bottom: 20px; }
+.check-item i { color: var(--accent); font-size: 24px; margin-top: 5px; }
+.check-text h4 { font-size: 1.2rem; font-weight: 700; margin-bottom: 5px; }
+.check-text p { color: var(--text-gray); font-size: 0.9rem; }
+
+.story-image img { 
+    width: 100%; 
+    border-radius: 20px; 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5); 
+}
 
 /* Profil Glassmorphism */
 .profile-flex { display: flex; align-items: center; gap: 60px; }
@@ -3429,8 +3444,16 @@ section { padding: 100px 0; overflow: hidden; }
     box-shadow: 0 10px 20px rgba(0,0,0,0.02);
 }
 .visi-card:hover, .misi-card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px rgba(0, 70, 139, 0.12); }
-.visi-card i, .misi-card i { font-size: 40px; color: var(--primary-blue); margin-bottom: 20px; }
+.visi-card i, .misi-card i { font-size: 40px; color: var(--accent); margin-bottom: 20px; }
 .misi-card ul { list-style: none; padding: 0; text-align: left; display: inline-block; }
+.misi-card li {
+    display: flex; /* Menggunakan Flexbox untuk kontrol posisi */
+    align-items: flex-start; /* MEMAKSA TEKS MEPEt KE ATAS SEJAJAR NOMOR */
+    gap: 10px; /* Jarak horizontal antara nomor dan teks */
+    margin-bottom: 12px;
+    text-align: left;
+    line-height: 1.5; /* Jarak antar baris teks agar enak dibaca */
+}
 
 /* Struktur Placeholder */
 .img-placeholder { background: white; padding: 20px; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.05); }
@@ -3458,7 +3481,7 @@ section { padding: 100px 0; overflow: hidden; }
     transition: 0.3s;
 }
 .cert-card:hover { border-color: var(--accent-blue); }
-.cert-card img { height: 80px; object-fit: contain; margin-bottom: 15px; }
+.cert-card img { height: 150px; object-fit: contain; margin-bottom: 15px; }
 
 .mitra-logo {
     height: 70px;
@@ -3488,3 +3511,10 @@ section { padding: 100px 0; overflow: hidden; }
     .profile-flex { flex-direction: column; text-align: center; }
     .section-title { font-size: 2rem; }
 }
+/* Responsive */
+@media (max-width: 992px) {
+    .story-grid, .vimi-grid, .values-grid { grid-template-columns: 1fr; }
+    .story-image { order: -1; }
+}
+
+
