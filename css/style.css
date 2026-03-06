@@ -1741,6 +1741,126 @@ nav.scrolled .logo-img-home {
     border-color: var(--accent);
 }
 
+/* --- CONTAINER UTAMA --- */
+.content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 40px; /* Memberikan ruang dari gambar di sebelah kiri */
+}
+
+/* --- AREA TEKS (JUDUL & PARAGRAF) --- */
+.title-area {
+    margin-bottom: 40px; /* Memberikan RONGGA yang luas sebelum tombol */
+}
+
+.line-text {
+    display: block;
+    color: #8d6e63; /* Warna aksen cokelat lembut */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 50px;
+}
+
+/* Garis dekoratif di depan "Parta Jasa" */
+.line-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 40px;
+    height: 2px;
+    background-color: #8d6e63;
+}
+
+.title-area h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.title-area p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8; /* Jarak antar baris agar teks tidak terlihat sesak */
+    max-width: 500px;
+}
+
+/* --- GRUP TOMBOL (SPACING & ALIGNMENT) --- */
+.btn-group-solusi {
+    display: flex;
+    gap: 20px; /* Jarak antar tombol agar tidak berantakan */
+    align-items: center;
+}
+
+/* Tombol Utama (Cokelat Gelap) */
+.btn-dark {
+    background-color: #4e342e;
+    color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid #4e342e;
+    text-align: center;
+}
+
+.btn-dark:hover {
+    background-color: #3e2723;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Tombol Outline (Transparan) */
+.btn-outline {
+    background-color: transparent;
+    color: #4e342e;
+    padding: 15px 35px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.btn-outline:hover {
+    border-color: #4e342e;
+    background-color: #f5f5f5;
+}
+
+/* RESPONSIVE UNTUK HP */
+@media (max-width: 768px) {
+    .content-right {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .line-text {
+        padding-left: 0;
+    }
+    
+    .line-text::before {
+        display: none;
+    }
+    
+    .btn-group-solusi {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .btn-dark, .btn-outline {
+        width: 100%;
+    }
+}
+
+
 /* TENTANG KAMI HOME */
 /* Layout Reverse untuk menukar posisi */
 .grid-2-cols-special.reverse {
@@ -3434,25 +3554,100 @@ section { padding: 100px 0; overflow: hidden; }
 }
 
 /* Visi Misi Cards */
-.vimi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-.visi-card, .misi-card {
-    background: var(--white);
-    padding: 50px;
-    border-radius: 20px;
-    text-align: center;
-    transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+/* --- CONTAINER VISI MISI --- */
+.section-light {
+    padding: 80px 0;
+    background-color: #f8fbff;
 }
-.visi-card:hover, .misi-card:hover { transform: translateY(-12px); box-shadow: 0 25px 50px rgba(0, 70, 139, 0.12); }
-.visi-card i, .misi-card i { font-size: 40px; color: var(--accent); margin-bottom: 20px; }
-.misi-card ul { list-style: none; padding: 0; text-align: left; display: inline-block; }
+
+.vimi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* --- KARTU (CARD) STYLE --- */
+.visi-card, .misi-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 70, 139, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #eef2f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Memposisikan ikon dan judul di tengah secara horizontal */
+ 
+}
+
+.visi-card:hover, .misi-card:hover {
+    transform: translateY(-5px);
+}
+
+.visi-card i, .misi-card i {
+    font-size: 40px;
+    color: #f97316; /* Warna oranye sesuai kode inline Anda */
+    margin-bottom: 20px;
+    display: block;
+}
+
+.visi-card h3, .misi-card h3 {
+    font-weight: 800;
+    color: #00468b;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.visi-card p {
+    line-height: 1.8;
+    color: #444;
+    text-align: justify;
+}
+
+/* --- SISTEM PENOMORAN MISI (MEPET ATAS) --- */
+.misi-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    counter-reset: misi-counter; /* Inisialisasi angka */
+}
+
 .misi-card li {
-    display: flex; /* Menggunakan Flexbox untuk kontrol posisi */
-    align-items: flex-start; /* MEMAKSA TEKS MEPEt KE ATAS SEJAJAR NOMOR */
-    gap: 10px; /* Jarak horizontal antara nomor dan teks */
-    margin-bottom: 12px;
-    text-align: left;
-    line-height: 1.5; /* Jarak antar baris teks agar enak dibaca */
+    display: flex;
+    align-items: flex-start; /* Memastikan angka & teks sejajar di baris pertama */
+    gap: 15px;
+    margin-bottom: 15px;
+    counter-increment: misi-counter; /* Tambah angka otomatis */
+}
+
+/* Mengganti ikon menjadi Nomor */
+.misi-card li i {
+    display: none; /* Sembunyikan ikon centang lama */
+}
+
+.misi-card li::before {
+    content: counter(misi-counter) "."; /* Menampilkan angka otomatis */
+    color: #f97316;
+    font-weight: 800;
+    font-size: 1.1rem;
+    min-width: 25px; /* Memberi ruang tetap untuk angka */
+    flex-shrink: 0;
+    margin-top: -2px; /* Penyesuaian mikro agar sejajar huruf pertama */
+}
+
+.misi-card li p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .vimi-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 /* Struktur Placeholder */
@@ -3515,6 +3710,24 @@ section { padding: 100px 0; overflow: hidden; }
 @media (max-width: 992px) {
     .story-grid, .vimi-grid, .values-grid { grid-template-columns: 1fr; }
     .story-image { order: -1; }
+}
+
+.services-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li {
+    display: flex;
+    align-items: flex-start; /* Ikon tetap di atas sejajar baris pertama */
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.services-list li i {
+    color: #f97316; /* Warna oranye */
+    margin-top: 5px; /* Menyesuaikan posisi vertikal ikon */
+    flex-shrink: 0;
 }
 
 
