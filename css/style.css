@@ -3731,3 +3731,294 @@ section { padding: 100px 0; overflow: hidden; }
 }
 
 
+/* --- BLOG PERTAMA --- */
+/* Styling Khusus Halaman Detail Blog */
+.blog-detail {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Judul Artikel */
+.blog-detail h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #222;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+/* Meta Data (Tanggal & Penulis) */
+.post-meta {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+.post-meta i {
+    color: var(--accent); /* Sesuaikan dengan warna brand Anda */
+    margin-right: 5px;
+}
+
+/* Isi Konten */
+.content-body p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.content-body h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 35px 0 15px;
+    color: #222;
+}
+
+/* Styling List (Bulleted & Numbered) */
+.content-body ul, 
+.content-body ol {
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.content-body li {
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    position: relative;
+}
+
+/* Custom Bullet untuk UL */
+.content-body ul li::before {
+    content: "\f058"; /* Font Awesome check-circle */
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--accent);
+    margin-right: 10px;
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .blog-detail h1 {
+        font-size: 1.8rem;
+    }
+    
+    .blog-detail {
+        margin: 30px auto;
+    }
+
+    .post-meta {
+        flex-direction: column;
+        gap: 5px;
+    }
+}
+
+
+/* --- BERITA 2 --- */
+/* Container Utama */
+.project-detail {
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+/* Header */
+.project-header h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+.project-location {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.project-location i {
+    color: #e74c3c;
+    margin-right: 8px;
+}
+
+/* Gambar Utama */
+.project-main-showcase {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.project-main-showcase img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+.status-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #27ae60;
+    color: white;
+    padding: 8px 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    font-size: 0.8rem;
+}
+
+/* Grid Layout */
+.project-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+/* Info Kiri */
+.project-info-left h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #222;
+    border-left: 4px solid #0056b3;
+    padding-left: 15px;
+}
+
+.work-done {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.work-done li {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.work-done i {
+    color: #27ae60;
+}
+
+/* Kartu Spek Kanan */
+.spec-card {
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    position: sticky;
+    top: 100px;
+}
+
+.spec-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.spec-item .label { color: #888; }
+.spec-item .val { font-weight: bold; color: #222; }
+
+.btn-wa-full {
+    display: block;
+    background: #25d366;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
+}
+
+.btn-wa-full:hover {
+    background: #128c7e;
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-grid { grid-template-columns: 1fr; }
+    .project-main-showcase img { height: 300px; }
+    .work-done { grid-template-columns: 1fr; }
+}
+
+
+/* --- ICON KONTAK SOSIAL MEDIA --- */
+/* Container Ikon */
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Styling Dasar Ikon */
+.social-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: #ffffff; /* Warna putih standar */
+    background: rgba(255, 255, 255, 0.1); /* Efek kaca transparan */
+    border-radius: 12px; /* Sudut melengkung modern, bukan lingkaran sempurna */
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek Hover Umum */
+.social-icon:hover {
+    transform: translateY(-5px); /* Ikon melompat sedikit ke atas */
+    color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Warna Spesifik saat Hover & Efek Glow */
+.social-icon.facebook:hover {
+    background: #1877F2;
+    box-shadow: 0 0 15px rgba(24, 119, 242, 0.5);
+    border-color: #1877F2;
+}
+
+.social-icon.instagram:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    box-shadow: 0 0 15px rgba(220, 39, 67, 0.5);
+    border-color: transparent;
+}
+
+.social-icon.linkedin:hover {
+    background: #0077b5;
+    box-shadow: 0 0 15px rgba(0, 119, 181, 0.5);
+    border-color: #0077b5;
+}
+
+.social-icon.youtube:hover {
+    background: #FF0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+    border-color: #FF0000;
+}
+
+/* Animasi Ikon di Dalamnya */
+.social-icon i {
+    transition: transform 0.4s;
+}
+
+.social-icon:hover i {
+    transform: scale(1.2); /* Ikon membesar sedikit saat hover */
+}
