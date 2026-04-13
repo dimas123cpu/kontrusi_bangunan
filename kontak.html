@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jasa Pagar & Kanopi</title>
+    <title>Kontak Kami</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -132,13 +132,13 @@
                     </div>
 
                     <div class="contact-buttons">
-                        <a href="https://wa.me/6281131100999" class="btn-whatsapp-large">
+                        <a href="https://wa.me/62895406014065" class="btn-whatsapp-large">
                             <i class="fab fa-whatsapp"></i> Chat Whatsapp
                         </a>
                     </div>
 
                     <ul class="contact-details">
-                        <li><i class="fas fa-phone-alt"></i> +62 81278496746</li>
+                        <li><i class="fas fa-phone-alt"></i> +62 8954 0601 4065</li>
                         <li>
                             <i class="fas fa-envelope"></i>
                             <div>
@@ -168,35 +168,45 @@
 
                 <div class="contact-form-box" data-aos="fade-left">
                     <h3 data-id="Kirim Pesan" data-en="Send Message">Kirim Pesan</h3>
-                    <form action="#">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label>Name</label>
-                                <input type="text" placeholder="Nama">
-                            </div>
-                            <div class="form-group">
-                                <label>Phone</label>
-                                <input type="text" placeholder="Phone">
-                            </div>
+                    <form action="https://formspree.io/f/meevjwad" method="POST">
+                        <div class="form-group">
+                            <label data-id="Nama" data-en="Name">Nama</label>
+                            <input type="text" name="Nama Pengirim" placeholder="Nama" required>
                         </div>
 
                         <div class="form-group">
-                            <label>Email</label>
-                            <input type="email" placeholder="Email">
+                            <label data-id="Telepon" data-en="Phone">Telepon</label>
+                            <input type="tel" name="Nomor HP" placeholder="Phone" required>
                         </div>
 
                         <div class="form-group">
-                            <label>Message</label>
-                            <textarea placeholder="Teks"></textarea>
+                            <label data-id="Email" data-en="Email">Email</label>
+                            <input type="email" name="Email Pengirim" placeholder="Email" required>
                         </div>
 
-                        <button type="submit" class="btn-submit">Kirim</button>
+                        <div class="form-group">
+                            <label data-id="Pesan" data-en="Message">Pesan</label>
+                            <textarea name="Pesan Masuk" placeholder="Teks" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-kirim" data-id="Kirim" data-en="Send">Kirim</button>
                     </form>
                 </div>
 
             </div>
         </div>
     </section>
+
+    <div class="map-container" data-aos="fade-up">
+        <h3 class="footer-title" data-id="Lokasi Kantor Kami" data-en="Our Office Location">Lokasi Kantor Kami</h3>
+        <div class="google-map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7967.350356110435!2d102.91646999999999!3d-3.1798899999999906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sid!2sid!4v1776054071799!5m2!1sid!2sid"
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
 
     <footer class="main-footer">
         <div class="footer-top">
@@ -228,26 +238,41 @@
                                     data-en="About Us">Tentang Kami</span></a></li>
                         <li><a href="layanan.html"><i class="fas fa-chevron-right"></i> <span data-id="Layanan"
                                     data-en="Services">Layanan</span></a></li>
-                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> <span data-id="Blog"
-                                    data-en="Blog">Blog</span></a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> <span data-id="Portofolio"
+                                    data-en="Portfolio">Portofolio</span></a></li>
+                        <li><a href="artikel.html"><i class="fas fa-chevron-right"></i> <span data-id="Artikel"
+                                    data-en="Articles">Artikel</span></a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="footer-title" data-id="Kontak Kami" data-en="Contact Us">Kontak Kami</h3>
                     <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> <span data-id="Marga Bakti, Lubuk Linggau"
-                                data-en="Marga Bakti, Lubuk Linggau">Marga Bakti, Kec. Lubuk Linggau Utara I, Kota
-                                Lubuklinggau, Sumatera Selatan</span></li>
-                        <li><i class="fas fa-phone-alt"></i> <span>+62 896 1072 0055</span></li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Fatmawati, Kel. Mangun Harjo, Kec. Purwodadi.
+                                Kab. Musi Rawas, Kabupaten Musirawas, Sumatera Selatan 31672</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+62 8954 0601 4065</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>partajasakonstruksi@gmail.com</span>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2024 <strong>ConstructPro</strong>. All Rights Reserved.</p>
+            <p>&copy; 2024 <strong>PT Parta Jasa Konstruksi</strong>. All Rights Reserved. Designed for Excellence.</p>
         </div>
     </footer>
+    </li>
+    </ul>
+    </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="js/script.js"></script>

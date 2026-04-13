@@ -4022,3 +4022,94 @@ section { padding: 100px 0; overflow: hidden; }
 .social-icon:hover i {
     transform: scale(1.2); /* Ikon membesar sedikit saat hover */
 }
+
+
+
+/* Styling Tombol Kirim Modern */
+.btn-kirim {
+    background-color: #d32f2f; /* Warna merah sesuai desain Anda */
+    color: #ffffff;
+    padding: 12px 35px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px; /* Sudut sedikit melengkung agar modern */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: fit-content;
+}
+
+/* Efek saat Kursor di Atas Tombol (Hover) */
+.btn-kirim:hover {
+    background-color: #b71c1c; /* Merah lebih gelap saat hover */
+    transform: translateY(-2px); /* Tombol sedikit naik */
+    box-shadow: 0 6px 12px rgba(211, 47, 47, 0.3);
+}
+
+/* Efek saat Tombol Diklik (Active) */
+.btn-kirim:active {
+    transform: translateY(0); /* Kembali ke posisi semula */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling Tambahan untuk Group Form agar Rapi */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group input, 
+.form-group textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus {
+    outline: none;
+    border-color: #d32f2f; /* Fokus warna merah */
+    box-shadow: 0 0 0 2px rgba(211, 47, 47, 0.1);
+}
+
+
+/* Styling Container Peta */
+.map-container {
+    margin-top: 50px;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.map-container h3 {
+    margin-bottom: 20px;
+    color: #222;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Membungkus iframe agar memiliki border radius */
+.google-map {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+}
+
+/* Memastikan peta tetap proporsional di HP */
+@media (max-width: 768px) {
+    .google-map iframe {
+        height: 300px; /* Lebih pendek di HP agar tidak memenuhi layar */
+    }
+}
