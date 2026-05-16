@@ -31,51 +31,89 @@
             </div>
             <li><a href="index.html" class="nav-link" data-id="Beranda" data-en="Home">Beranda</a></li>
             <li><a href="about.html" class="nav-link" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a></li>
-            <li class="dropdown">
-                <span class="nav-link" data-id="Layanan" data-en="Services">
+            <!-- Bagian Menu Produk yang diubah -->
+            <li class="dropdown has-mega">
+                <a href="javascript:void(0)" class="nav-link" data-id="Produk" data-en="Products">
+                    Produk <i class="fas fa-chevron-down icon-small"></i>
+                </a>
+
+                <div class="mega-dropdown-wrapper">
+                    <div class="mega-content">
+                        <!-- Kolom 1 -->
+                        <div class="mega-col">
+                            <h3>Pipa & Plumbing</h3>
+                            <ul>
+                                <li><a href="#">Pipa uPVC Standard</a></li>
+                                <li><a href="#">Pipa PE-RT</a></li>
+                                <li><a href="#">Fitting JIS</a></li>
+                                <li><a href="#">Fitting uPVC</a></li>
+                            </ul>
+                        </div>
+                        <!-- Kolom 2 -->
+                        <div class="mega-col">
+                            <h3>Material Bangunan</h3>
+                            <ul>
+                                <li><a href="#">Semen & Mortar</a></li>
+                                <li><a href="#">Bata Ringan</a></li>
+                                <li><a href="#">Pasir & Agregat</a></li>
+                            </ul>
+                        </div>
+                        <!-- Kolom 3 -->
+                        <div class="mega-col">
+                            <h3>Struktur & Konstruksi</h3>
+                            <ul>
+                                <li><a href="#">Baja WF & CNP</a></li>
+                                <li><a href="#">Besi Beton SNI</a></li>
+                                <li><a href="#">Beton Readymix</a></li>
+                            </ul>
+                        </div>
+                        <!-- Kolom 4 -->
+                        <div class="mega-col">
+                            <h3>Finishing & Tools</h3>
+                            <ul>
+                                <li><a href="#">Cat & Finishing</a></li>
+                                <li><a href="#">Interior Fittings</a></li>
+                                <li><a href="#">Peralatan & Tools</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown has-mega">
+                <a href="javascript:void(0)" class="nav-link mega-trigger" data-id="Layanan" data-en="Services">
                     Layanan <i class="fas fa-chevron-down icon-small"></i>
-                </span>
-                <div class="dropdown-content">
-                    <div class="has-submenu">
-                        <div class="submenu-trigger">
-                            <span class="menu-text" data-id="Rumah Hunian" data-en="Residential">Rumah Hunian</span>
-                            <i class="fas fa-chevron-right mobile-arrow"></i>
+                </a>
+                <div class="mega-dropdown-wrapper">
+                    <div class="mega-content">
+                        <div class="mega-col">
+                            <h3 data-id="Rumah Hunian" data-en="Residential Homes">Rumah Hunian</h3>
+                            <ul>
+                                <li><a href="bangun_rumah.html">Jasa Bangun Rumah</a></li>
+                                <li><a href="renovasi.html">Jasa Renovasi Rumah</a></li>
+                                <li><a href="disain_interior.html">Jasa Interior Rumah</a></li>
+                                <li><a href="pagar_kanopi.html">Jasa Pagar & Kanopi</a></li>
+                                <li><a href="desain_rumah.html">Jasa Desain Rumah</a></li>
+                            </ul>
                         </div>
-                        <div class="sub-dropdown">
-                            <a href="bangun_rumah.html" data-id="Jasa Bangun Rumah" data-en="Home Construction">Jasa
-                                Bangun Rumah</a>
-                            <a href="renovasi.html" data-id="Jasa Renovasi Rumah" data-en="Home Renovation">Jasa
-                                Renovasi Rumah</a>
-                            <a href="disain_interior.html" data-id="Jasa Interior Rumah" data-en="Home Interior">Jasa
-                                Interior Rumah</a>
-                            <a href="pagar_kanopi.html" data-id="Jasa Pagar & Kanopi" data-en="Fence & Canopy">Jasa
-                                Pagar & Kanopi</a>
-                            <a href="desain_rumah.html" data-id="Jasa Desain Rumah" data-en="House Design Services">Jasa
-                                Desain Rumah</a>
+
+                        <div class="mega-col">
+                            <h3 data-id="Perusahaan (B2B)" data-en="Company (B2B)">Perusahaan (B2B)</h3>
+                            <ul>
+                                <li><a href="renovasi_kantor.html">Jasa Renovasi Kantor</a></li>
+                                <li><a href="gedung.html">Jasa Bangun Gedung</a></li>
+                                <li><a href="fit_out.html">Jasa Fit Out Kantor & Ruko</a></li>
+                                <li><a href="interior_kantor.html">Jasa Interior Kantor</a></li>
+                                <li><a href="konstruksi_baja.html">Jasa Konstruksi Baja</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mega-col">
+                            <ul>
+                                <li><a href="layanan.html" style="font-weight: bold; color: #ffffff;">Semua Layanan</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-
-                    <div class="has-submenu">
-                        <div class="submenu-trigger">
-                            <span class="menu-text" data-id="Perusahaan (B2B)" data-en="Corporate (B2B)">Perusahaan
-                                (B2B)</span>
-                            <i class="fas fa-chevron-right mobile-arrow"></i>
-                        </div>
-                        <div class="sub-dropdown">
-                            <a href="renovasi_kantor.html" data-id="Jasa Renovasi Kantor"
-                                data-en="Office Renovation">Jasa Renovasi Kantor</a>
-                            <a href="gedung.html" data-id="Jasa Bangun Bangunan Komersial"
-                                data-en="Commercial Building">Jasa Bangun Bangunan Komersial</a>
-                            <a href="fit_out.html" data-id="Jasa Fit Out Kantor & Ruko" data-en="Office Fit Out">Jasa
-                                Fit Out Kantor & Ruko</a>
-                            <a href="interior_kantor.html" data-id="Jasa Interior Kantor" data-en="Office Interior">Jasa
-                                Interior Kantor</a>
-                            <a href="konstruksi_baja.html" data-id="Jasa Konstruksi Baja"
-                                data-en="Steel Construction">Jasa Konstruksi Baja</a>
-                        </div>
-                    </div>
-
-                    <a href="layanan.html" data-id="Semua Layanan" data-en="All Services">Semua Layanan</a>
                 </div>
             </li>
             <li><a href="portofolio.html" class="nav-link" data-id="Portofolio" data-en="Portfolio">Portofolio</a></li>

@@ -187,18 +187,45 @@ window.addEventListener('click', function(e) {
 
 //
 
-// Gunakan event delegation supaya pasti kena targetnya
-document.addEventListener('click', function(e) {
-    const navMenu = document.querySelector('#nav-menu');
-    const hamburger = document.querySelector('#hamburger');
-    
-    // 1. CEK: Apakah yang diklik itu tombol X atau icon di dalam tombol X?
-    if (e.target.closest('#close-menu')) {
-        console.log("Tombol X diklik!");
-        navMenu.classList.remove('active');
-        hamburger.classList.remove('active');
-        document.body.style.overflow = 'auto';
+document.addEventListener('DOMContentLoaded', function() {
+    const productBtn = document.querySelector('.has-mega > .nav-link');
+    const megaMenu = document.querySelector('.mega-dropdown-wrapper');
+    const productIcon = productBtn.querySelector('.icon-small');
+
+    // 1. Logika Klik Menu Produk (Mega Menu)
+    productBtn.addEventListener('click', function(e) {
+        e.preventDefault(); // Matikan link toko.html
+        e.stopPropagation(); // Cegah perintah klik tembus ke dokumen
+
+        // Toggle menu Produk
+        const isOpen = megaMenu.classList.contains('show-mega');
+        
+        // Tutup semua menu lain dulu jika ada (opsional)
+        closeAllMenus();
+
+        if (!isOpen) {
+            megaMenu.classList.add('show-mega');
+            if (productIcon) productIcon.classList.add('rotate-icon');
+        }
+    });
+
+    // 2. Klik di mana saja untuk menutup menu
+    document.addEventListener('click', function(e) {
+        if (!megaMenu.contains(e.target) && !productBtn.contains(e.target)) {
+            closeAllMenus();
+        }
+    });
+
+    // Fungsi Pembantu untuk Menutup
+    function closeAllMenus() {
+        megaMenu.classList.remove('show-mega');
+        if (productIcon) productIcon.classList.remove('rotate-icon');
     }
+
+    // 3. Mencegah klik di dalam area mega menu agar tidak menutup menu itu sendiri
+    megaMenu.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
 });
 
 
@@ -296,3 +323,141 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'Enter') executeSearch();
     });
 });
+
+
+// DETAIL PRODUK
+function orderViaWA() {
+    const location = document.getElementById('shipping-location').value;
+    const productName = document.querySelector('.product-title').innerText;
+    const phoneNumber = "62895406014065";
+    
+    const message = `*DISKUSI PRODUK - PT PARTA JASA*\n\nHalo Admin, saya tertarik dengan:\n*${productName}*\n\nLokasi Proyek: ${location}\n\nMohon informasi harga terbaru dan estimasi pengirimannya. Terima kasih.`;
+    
+    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+}
+
+
+// DROPSOWN PRODUK
+document.addEventListener('DOMContentLoaded', function() {
+    const megaMenuTrigger = document.querySelector('.has-mega > .nav-link');
+    const megaDropdown = document.querySelector('.mega-dropdown-wrapper');
+    const arrowIcon = megaMenuTrigger.querySelector('.icon-small');
+
+    // Fungsi Klik untuk Buka/Tutup
+    megaMenuTrigger.addEventListener('click', function(e) {
+        // Mencegah navigasi ke toko.html hanya pada klik pertama saat menu tertutup
+        if (!megaDropdown.classList.contains('active')) {
+            e.preventDefault(); 
+        } else {
+            // Jika sudah terbuka, biarkan navigasi bekerja atau tutup kembali (pilihan)
+            // e.preventDefault(); // Gunakan ini jika ingin klik kedua hanya untuk menutup
+        }
+
+        // Toggle class Active
+        megaDropdown.classList.toggle('active');
+        
+        // Animasi rotasi ikon panah
+        if (arrowIcon) {
+            arrowIcon.classList.toggle('rotate');
+        }
+    });
+
+    // Menutup menu jika mengklik di luar area navbar
+    document.addEventListener('click', function(e) {
+        const isClickInside = megaMenuTrigger.parentElement.contains(e.target);
+
+        if (!isClickInside && megaDropdown.classList.contains('active')) {
+            megaDropdown.classList.remove('active');
+            if (arrowIcon) {
+                arrowIcon.classList.remove('rotate');
+            }
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const productLink = document.querySelector('.has-mega > .nav-link');
+    const megaWrapper = document.querySelector('.mega-dropdown-wrapper');
+
+    if (productLink) {
+        productLink.addEventListener('click', function(e) {
+            if (window.innerWidth <= 991) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // Toggle menu produk
+                megaWrapper.classList.toggle('open');
+                
+                // Rotasi icon panah jika ada
+                const icon = this.querySelector('.icon-small');
+                if (icon) icon.classList.toggle('rotate-icon');
+            }
+        });
+    }
+});
+
+
+//klik  toko.html
+const productLink = document.querySelector('.has-mega > .nav-link');
+
+productLink.addEventListener('click', function(e) {
+    // Mencegah navigasi ke toko.html
+    e.preventDefault(); 
+    
+    // Logika buka tutup menu Anda di sini
+    const megaWrapper = document.querySelector('.mega-dropdown-wrapper');
+    megaWrapper.classList.toggle('open');
+    
+    // Rotasi icon panah
+    const icon = this.querySelector('.icon-small');
+    if (icon) icon.classList.toggle('rotate-icon');
+});
+
+// PEMBARUAN DROPDOWN
+document.addEventListener('DOMContentLoaded', function() {
+    // Mencari semua tombol yang punya class mega-trigger
+    const triggers = document.querySelectorAll('.mega-trigger');
+
+    triggers.forEach(trigger => {
+        trigger.addEventListener('click', function(e) {
+            e.preventDefault(); // Stop pindah halaman
+            e.stopPropagation(); // Stop event agar tidak dianggap klik di luar area
+
+            // Cari pembungkus terdekat dan dropdown-nya
+            const parent = this.closest('.has-mega');
+            const dropdown = parent.querySelector('.mega-dropdown-wrapper');
+            const icon = this.querySelector('.icon-small');
+
+            // 1. Tutup mega menu lain yang mungkin sedang terbuka (agar tidak tabrakan)
+            document.querySelectorAll('.mega-dropdown-wrapper').forEach(menu => {
+                if (menu !== dropdown) {
+                    menu.classList.remove('active-mega');
+                    // Reset icon panah menu lain
+                    const otherIcon = menu.parentElement.querySelector('.icon-small');
+                    if (otherIcon) otherIcon.classList.remove('rotate-icon');
+                }
+            });
+
+            // 2. Klik untuk Buka atau Tutup (Toggle)
+            dropdown.classList.toggle('active-mega');
+            
+            // 3. Animasi rotasi panah
+            if (icon) {
+                icon.classList.toggle('rotate-icon');
+            }
+        });
+    });
+
+    // Menutup menu jika klik di sembarang tempat di luar navbar
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.has-mega')) {
+            document.querySelectorAll('.mega-dropdown-wrapper').forEach(menu => {
+                menu.classList.remove('active-mega');
+                const icon = menu.parentElement.querySelector('.icon-small');
+                if (icon) icon.classList.remove('rotate-icon');
+            });
+        }
+    });
+});
+
+//MENU DROPDOWN TERTUTUP OTOMATIS

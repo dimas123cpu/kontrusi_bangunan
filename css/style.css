@@ -1,3 +1,61 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+h1 { font-size: 2.5rem; letter-spacing: -0.02em; } /* 40px */
+h2 { font-size: 2rem; border-bottom: 1px solid #f0f0f0; padding-bottom: 10px; } /* 32px */
+h3 { font-size: 1.5rem; } /* 24px */
+
+/* 3. Perapihan Paragraf dan Teks Konten */
+p {
+    margin-bottom: 1.25rem;
+    font-size: 1rem; /* 16px - Minimal ukuran yang disarankan Google untuk Mobile */
+}
+
+
 
 :root {
     --primary: #0f172a; 
@@ -201,7 +259,7 @@ nav.scrolled .bar {
 
 .search-icon {
     cursor: pointer;
-    color: var(--primary);
+    color: var(--white);
     font-size: 1.1rem;
     transition: var(--transition);
 }
@@ -4113,3 +4171,444 @@ section { padding: 100px 0; overflow: hidden; }
         height: 300px; /* Lebih pendek di HP agar tidak memenuhi layar */
     }
 }
+
+
+/* --- toko --- */
+.product-page {
+    padding: 40px 0;
+    background: #fff;
+}
+
+.product-detail-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Sisi kiri lebih lebar untuk gambar */
+    gap: 50px;
+}
+
+/* Gallery Style */
+.main-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 100px; /* Gambar tetap diam saat scroll deskripsi */
+}
+
+/* Info Style */
+.breadcrumb { font-size: 13px; color: #03ac0e; margin-bottom: 10px; font-weight: bold; }
+.product-title { font-size: 28px; font-weight: 800; margin-bottom: 20px; color: #222; }
+
+.product-tabs { display: flex; gap: 30px; border-bottom: 1px solid #eee; margin-bottom: 20px; }
+.tab-item.active { color: #03ac0e; border-bottom: 3px solid #03ac0e; padding-bottom: 10px; font-weight: bold; }
+
+.description-content { line-height: 1.8; color: #444; margin-bottom: 30px; font-size: 15px; }
+.description-content ul { padding-left: 20px; margin-top: 10px; }
+
+/* Purchase Card */
+.purchase-card {
+    border: 1px solid #e5e7e9;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.shipment-selector select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.btn-whatsapp-direct {
+    width: 100%;
+    background: #03ac0e;
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-whatsapp-direct:hover { background: #028a0b; transform: scale(1.02); }
+.disclaimer { font-size: 11px; color: #999; margin-top: 15px; text-align: center; font-style: italic; }
+
+@media (max-width: 992px) {
+    .product-detail-layout { grid-template-columns: 1fr; }
+}
+
+/* --- DROPDOWN PRODUK --- */
+/* Pastikan nav-menu memiliki posisi relative */
+
+
+/* Hanya aktif jika li memiliki class .has-mega */
+.has-mega {
+    position: static !important; /* Membuat dropdown bisa melebar penuh searah navbar */
+}
+
+.mega-dropdown-wrapper {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #00364b 0%, #001a2b 100%); /* Warna Biru Gradasi Rucika */
+    z-index: 1000;
+    padding: 40px 0;
+    display: none; /* Sembunyikan default */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-top: 3px solid #00adef;
+}
+
+/* Tampilkan hanya saat menu Produk di-hover */
+.has-mega:hover .mega-dropdown-wrapper {
+    display: block;
+    animation: fadeInMega 0.3s ease-in-out;
+}
+
+.mega-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Kolom seperti di foto */
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.mega-col h3 {
+    color: #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.mega-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mega-col ul li {
+    margin-bottom: 10px;
+}
+
+.mega-col ul li a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 13.5px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+.mega-col ul li a:hover {
+    color: #ffffff;
+    padding-left: 8px; /* Efek geser saat hover */
+    font-weight: 600;
+}
+
+
+
+/* Container Nav Menu untuk Mobile */
+@media (max-width: 991px) {
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Sembunyi di kanan */
+        width: 70%; /* Lebar menu seperti di foto */
+        height: 100vh;
+        background: #0a1124; /* Warna biru gelap pekat sesuai foto */
+        display: flex !important;
+        flex-direction: column;
+        padding: 30px 30px;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 9999;
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        right: 0; /* Muncul ke layar */
+    }
+
+    /* Tombol Close (X) di pojok kanan atas */
+    .close-btn-container {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        color: #fff;
+        font-size: 8px;
+        cursor: pointer;
+    }
+
+    /* List Menu */
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Garis tipis pembatas */
+        margin: 0;
+    }
+
+    .nav-link {
+        color: #fff !important;
+        padding: 14px 0;
+        font-size: 12px; /* Ukuran teks lebih kecil & elegan seperti foto */
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Styling Dropdown di dalam Mobile (Accordion) */
+    .dropdown-content, .mega-dropdown-wrapper {
+        position: relative!important;
+        width: 100% !important;
+        background: rgba(255, 255, 255, 0.02) !important;
+        display: none; /* Sembunyi awal */
+        padding-left: 20px !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding-bottom: -100000000px;
+    }
+
+    .dropdown-content.open, .mega-dropdown-wrapper.open {
+        display: block !important;
+    }
+
+    /* Link di dalam dropdown */
+    .dropdown-content a, .mega-col ul li a {
+        color: #adb5bd !important;
+        padding: 12px 0;
+        font-size: 13px;
+        text-transform: none;
+        border: none;
+    }
+
+    /* Overlay latar belakang saat menu buka */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+        z-index: 9998;
+    }
+
+    .menu-overlay.active {
+        display: block;
+    }
+}
+
+/* Hilangkan efek hover otomatis */
+.has-mega:hover .mega-dropdown-wrapper {
+    display: none; 
+}
+
+/* Gunakan class khusus untuk membuka */
+.mega-dropdown-wrapper.show-mega {
+    display: block !important;
+    animation: fadeInMega 0.3s ease-out;
+}
+
+/* Rotasi panah saat aktif */
+.rotate-icon {
+    transform: rotate(180deg);
+    transition: 0.3s;
+}
+
+/* Pastikan dropdown-content (Layanan/Artikel) tetap pada sistem lama atau hover */
+.dropdown:hover > .dropdown-content {
+    display: block;
+}
+
+
+@media (max-width: 991px) {
+    /* Pastikan menu utama tidak tertutup */
+    .nav-menu {
+        overflow-y: auto; /* Supaya bisa di-scroll jika menu panjang */
+        display: block !important; /* Paksa urutan ke bawah */
+    }
+
+    /* Perbaikan Mega Menu supaya tidak tabrakan */
+    .mega-dropdown-wrapper {
+        position: relative !important; /* Ubah dari absolute ke relative */
+        width: 100% !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        padding: 0 !important;
+        display: none; /* Sembunyikan awal */
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Saat terbuka (tambah class via JS) */
+    .mega-dropdown-wrapper.open {
+        display: block !important;
+    }
+
+    /* Paksa kolom produk jadi satu baris vertikal */
+    .mega-content {
+        display: block !important; /* Bukan Grid lagi */
+        padding: 10px 20px !important;
+    }
+
+    .mega-col {
+        margin-bottom: 20px;
+        width: 100% !important;
+    }
+
+    .mega-col h3 {
+        font-size: 13px;
+        color: #00adef; /* Warna pembeda untuk judul kategori */
+        margin-bottom: 10px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    /* Link produk di dalam mega menu */
+    .mega-col ul li a {
+        padding: 10px 0 !important;
+        border: none !important;
+        font-size: 12px !important;
+        color: #ccc !important;
+    }
+
+    /* Supaya menu di bawah (Portofolio, Artikel, dll) terdorong ke bawah */
+    .has-mega {
+        height: auto !important;
+    }
+}
+
+/* Warna Biru Gradasi Rucika yang konsisten */
+.mega-dropdown-wrapper {
+    background: linear-gradient(135deg, #00adef 0%, #0072bc 100%);
+    /* ... sisa css sebelumnya ... */
+}
+
+/* Memastikan teks kolom terlihat rapi */
+.mega-col h3 {
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 991px) {
+    /* Menyamakan gaya dengan menu produk di ponsel */
+    .has-mega .mega-dropdown-wrapper {
+        display: none; /* Sembunyi awal */
+        position: relative !important; /* Supaya mendorong menu di bawahnya */
+        width: 100% !important;
+        background: rgba(255, 255, 255, 0.03) !important;
+        padding: 10px 20px !important;
+        top: 0 !important;
+    }
+
+    /* Class untuk memunculkan menu via JS */
+    .mega-dropdown-wrapper.active-mega {
+        display: block !important;
+    }
+
+    .mega-content {
+        display: block !important; /* Ubah kolom menjadi baris vertikal */
+    }
+
+    .mega-col {
+        margin-bottom: 15px;
+    }
+
+    .mega-col h3 {
+        font-size: 14px;
+        color: #00adef;
+        margin-bottom: 8px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+}
+
+/* Sembunyikan default */
+.mega-dropdown-wrapper {
+    display: none; 
+}
+
+/* Munculkan saat aktif */
+.mega-dropdown-wrapper.active-mega {
+    display: block !important;
+}
+
+/* Pastikan di Mobile juga bisa muncul */
+@media (max-width: 991px) {
+    .mega-dropdown-wrapper.active-mega {
+        display: block !important;
+        position: relative !important; /* Agar mendorong menu di bawahnya */
+    }
+}
+
+/* Menghilangkan animasi agar muncul seketika */
+.mega-dropdown-wrapper.active-mega {
+    display: block !important;
+    animation: none !important; /* Menghapus animasi fadeInMega */
+    transition: none !important; /* Menghapus transisi apapun */
+    transform: none !important;  /* Memastikan tidak ada pergerakan posisi */
+    opacity: 1 !important;       /* Memastikan langsung terlihat penuh */
+}
+
+/* Pastikan elemen dasarnya juga tidak memiliki transisi */
+.mega-dropdown-wrapper {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #0f172a 0%, #0f172a 100%);
+    z-index: 9999;
+    padding: 30px 0;
+    transition: none !important; /* Hapus transisi di sini juga */
+}
+
+/* Jika ingin ikon panah juga berputar tanpa animasi */
+.nav-link i.rotate-icon {
+    transform: rotate(180deg);
+    transition: none !important;
+}
+
+/* TOMBOL SERCH */
+@media (max-width: 991px) {
+
+
+    /* 2. Menghilangkan margin bawaan agar bisa disejajarkan */
+    .search-container, .lang-btn {
+        margin: 0 !important;
+        padding: 10px 0 !important;
+    }
+
+    /* 3. Membuat container bayangan untuk menampung Search dan EN secara berdampingan */
+    /* Kita gunakan order untuk memindahkan posisi ke paling bawah */
+    .search-container {
+        order: 10; 
+        display: inline-block;
+        width: auto;
+    }
+
+    .lang-btn {
+        order: 11;
+        width: fit-content;
+        margin-top: -45px !important; /* Menaikkan tombol EN agar sejajar Search */
+        margin-left: 50px !important; /* Menggeser EN ke samping Search */
+    }
+
+    /* 4. Menyesuaikan input search agar tidak menutupi tombol EN */
+    .search-input {
+        width: 150px !important; /* Membatasi lebar input */
+    }
+}
+
+
+
+
+
+
+
