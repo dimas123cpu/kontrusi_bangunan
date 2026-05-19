@@ -15,7 +15,7 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font: monsterat;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -42,7 +42,12 @@ table {
 	border-spacing: 0;
 }
 
-
+h1, h2, h3, h4, h5, h6 {
+ 
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 1.5rem;
+}
 
 
 h1 { font-size: 2.5rem; letter-spacing: -0.02em; } /* 40px */
@@ -4607,8 +4612,744 @@ section { padding: 100px 0; overflow: hidden; }
 }
 
 
+/* --- PENUTUP ATAP --- */
+
+/* --- SECTION ATAP LAYOUT --- */
+.ataps-section {
+    padding: 50px 0;
+    background-color: #fafafa;
+    width: 100%;
+}
+
+.ataps-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- STRUKTUR KARTU --- */
+.atap-card {
+    background-color: #ffffff;
+    width: 50%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    
+    /* Trigger Animasi Muncul */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.3s ease;
+}
+
+/* Ketika class .revealed ditambahkan via JS */
+.atap-card.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efek Angkat Saat Hover */
+.atap-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* --- BANNER MERAH ATAS --- */
+.card-header-red {
+    background: #cc1818;
+    color: #ffffff;
+    padding: 25px 30px;
+}
+
+.atap-label {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+
+.atap-name {
+    font-size: 32px;
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+/* --- KOTAK AREA GAMBAR --- */
+.images-box {
+    padding: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.images-box .main-img {
+    width: 68%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+.images-box .profile-img {
+    width: 28%;
+    height: auto;
+    transition: transform 0.4s ease;
+}
+
+/* Animasi Zoom Halus Gambar saat Kartu di-hover */
+.atap-card:hover .main-img,
+.atap-card:hover .profile-img {
+    transform: scale(1.03);
+}
+
+/* --- AREA DETAIL SPESIFIKASI --- */
+.details-content {
+    padding: 30px;
+}
+
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+    gap: 15px;
+}
+
+.spec-col {
+    flex: 1;
+}
+
+.spec-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #333333;
+    margin-bottom: 5px;
+}
+
+.spec-value {
+    font-size: 13.5px;
+    color: #555555;
+    line-height: 1.4;
+}
+
+.spec-value.highlight {
+    color: #cc1818;
+    font-weight: 600;
+}
+
+/* --- SUB-SECTION INTERNAL --- */
+.inner-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #222222;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 6px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+/* Thumbnail Grid */
+.thumb-wrapper {
+    display: flex;
+    gap: 12px;
+}
+
+.thumb-item {
+    flex: 1;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.thumb-item img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Foto Proyek & Placeholder Gambar Kosong */
+.project-box {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.project-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+}
+
+.gray-placeholder {
+    width: 100%;
+    height: 160px;
+    background-color: #e6e6e6;
+    border-radius: 6px;
+}
+
+.caption-text {
+    font-size: 12px;
+    color: #777777;
+    margin-top: 7px;
+}
+
+/* --- RESPONSIVE MOBILE TWEAKS --- */
+@media (max-width: 868px) {
+    .ataps-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .atap-card {
+        width: 100%;
+    }
+}
 
 
+/* --- FOOTER PILIHAN WARNA --- */
+.color-options-footer {
+    background-color: #e9ecef; /* Latar belakang abu-abu terang sesuai foto brosur */
+    padding: 25px 0;
+    width: 100%;
+    border-top: 1px solid #dee2e6;
+}
+
+.color-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 92%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Judul Teks Pilihan Warna */
+.color-title {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #333333;
+    white-space: nowrap; /* Mencegah tulisan teks turun ke bawah */
+}
+
+/* Container untuk Kapsul-Kapsul */
+.color-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 14px; /* Jarak antar baris dan kolom kapsul */
+    align-items: center;
+}
+
+/* Base Style Kapsul Oval */
+.color-capsule {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 6px 18px;
+    border-radius: 50px; /* Membuat bentuk oval/kapsul sempurna */
+    text-align: center;
+    display: inline-block;
+    min-width: 100px;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.15); /* Dimensi bayangan halus di bawah kapsul */
+    
+    /* Animasi Hover Interaktif */
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Efek saat Kapsul di-Hover */
+.color-capsule:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15), inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* --- KODE WARNA SPESIFIK (PERSIS FOTO) --- */
+.merah-merapi {
+    background-color: #b81d24; /* Merah Pekat Marun */
+}
+
+.hitam-rumbai {
+    background-color: #2b2b2a; /* Hitam Arang/Gelap */
+}
+
+.hijau-borneo {
+    background-color: #0b6643; /* Hijau Daun Tua */
+}
+
+.biru-bromo {
+    background-color: #005691; /* Biru Deep Ocean */
+}
+
+.merah-carita {
+    background-color: #8a1318; /* Merah Kecoklatan Tua */
+}
+
+.coklat-bengkalis {
+    background-color: #614636; /* Coklat Tanah */
+}
+
+.netral-abu {
+    background-color: #b0b5b9; /* Abu-abu Semen */
+    color: #333333; /* Teks berwarna gelap agar kontras pada warna netral */
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .color-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .color-grid {
+        gap: 8px;
+    }
+    
+    .color-capsule {
+        padding: 5px 14px;
+        min-width: 90px;
+    }
+}
 
 
+/* --- CONTAINER TOMBOL WA DI BAWAH WARNA --- */
+.wa-footer-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: 25px auto 0 auto; /* Memberi jarak di bawah pilihan warna */
+    text-align: center;
+    border-top: 1px solid #dee2e6; /* Garis pembatas tipis */
+    padding-top: 20px;
+}
 
+/* Style Tombol WA Hijau Profesional */
+.wa-chat-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #25d366; /* Warna Hijau Asli WA */
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 28px;
+    border-radius: 6px; /* Menyamakan gaya kaku rapi konstruksi */
+    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+/* Ikon WA */
+.wa-chat-btn i {
+    font-size: 18px;
+}
+
+/* Animasi Hover Tombol WA */
+.wa-chat-btn:hover {
+    background-color: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+}
+
+.wa-chat-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .wa-footer-container {
+        margin-top: 20px;
+        padding-top: 15px;
+    }
+    .wa-chat-btn {
+        width: 100%; /* Tombol melebar penuh di HP agar mudah diklik jempol */
+        justify-content: center;
+        padding: 12px 15px;
+    }
+}
+
+/* --- BERANDA NEW --- */
+/* --- SCROLL REVEAL ANIMATION SYSTEM --- */
+/* --- SCROLL REVEAL ANIMATION SYSTEM (ANTI-BLANK KOREKSI) --- */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1), 
+                transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    
+    /* FALLBACK: Jika JS tidak jalan dalam 1.5 detik, 
+       paksa section muncul agar tidak merugikan SEO Google */
+    animation: forceReveal 0.5s 1.5s forwards; 
+}
+
+/* Ketika JavaScript berhasil mendeteksi scroll */
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+    animation: none; /* Matikan fallback jika JS sukses */
+}
+
+@keyframes forceReveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- 1. STATS COUNTER --- */
+.stats-section {
+    background-color: #ffffff;
+    padding: 30px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.stat-box {
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    width: 22%;
+    border-radius: 4px;
+}
+
+.stat-number {
+    font-size: 32px;
+    color: #1a202c;
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 13.5px;
+    color: #4a5568;
+    margin-top: 4px;
+}
+
+/* --- JUDUL STANDAR & DESKRIPSI --- */
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 15px;
+}
+
+.section-desc {
+    color: #718096;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* --- 2. PROFILE SECTION --- */
+.profile-section {
+    padding: 60px 8%;
+}
+
+.profile-container {
+    display: flex;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.profile-text { flex: 1.2; }
+.profile-images { 
+    flex: 0.8; 
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.img-wrapper {
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    height: 180px;
+}
+
+.img-wrapper img {
+    width: 100%; height: 100%; object-fit: cover;
+}
+
+/* Label Pojok Atas Gambar */
+.card-label::before {
+    content: attr(data-label);
+    position: absolute;
+    top: 15px; left: 15px;
+    background: #0b132b;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 3px;
+    z-index: 2;
+}
+
+.card-label[data-label="Rumah Hunian"]::before {
+    background: #cc1818;
+}
+
+/* List Fitur Icon */
+.service-list { display: flex; flex-direction: column; gap: 20px; }
+.service-item { display: flex; gap: 15px; align-items: flex-start; }
+.service-icon {
+    background-color: #cc1818;
+    color: #ffffff;
+    width: 40px; height: 40px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.service-info h4 { font-size: 14.5px; font-weight: 700; color: #2d3748; margin-bottom: 4px; }
+.service-info p { font-size: 13px; color: #718096; line-height: 1.5; }
+
+/* --- 3. KEUNGGULAN SECTION --- */
+.features-section {
+    background-color: #f7fafc;
+    padding: 60px 8%;
+}
+
+.features-container {
+    display: flex; gap: 40px; max-width: 1200px; margin: 0 auto;
+}
+
+.features-left { flex: 1.3; }
+.features-right { flex: 0.7; border-radius: 8px; overflow: hidden; }
+.features-right img { width: 100%; height: 100%; object-fit: cover; }
+
+.features-grid {
+    display: flex; flex-wrap: wrap; gap: 20px;
+}
+
+.feature-box {
+    background: #ffffff;
+    padding: 20px;
+    width: 48%;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.01);
+    transition: transform 0.3s;
+}
+
+.feature-box:hover { transform: translateY(-4px); }
+.feature-box i { font-size: 24px; color: #000080; margin-bottom: 12px; }
+.feature-box h4 { font-size: 14.5px; font-weight: 700; margin-bottom: 6px; }
+.feature-box p { font-size: 12.5px; color: #718096; line-height: 1.4; }
+
+/* --- 4. PROJECT PORTFOLIO GRID --- */
+.project-section { padding: 60px 8%; background: #ffffff; }
+.container-center { max-width: 1100px; margin: 0 auto; text-align: center; }
+.main-project-title { font-size: 28px; font-weight: 700; margin-bottom: 40px; letter-spacing: 1px;}
+
+.project-category { margin-bottom: 45px; }
+.category-title { font-size: 16px; font-weight: 700; color: #4a5568; margin-bottom: 20px; letter-spacing: 1px; }
+
+.project-grid { display: flex; justify-content: space-between; gap: 20px; }
+.project-card {
+    width: 32%; background: #ffffff; border-radius: 6px; overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover { transform: scale(1.02); }
+.project-card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+
+/* Black & White filter untuk kategori industri */
+.gray-scale img { filter: grayscale(100%); transition: filter 0.3s; }
+.gray-scale:hover img { filter: grayscale(0%); }
+
+.project-card-footer {
+    padding: 12px 15px; font-size: 13px; font-weight: 700; color: #ffffff; text-align: center;
+}
+
+.red-bg { background-color: #cc1818; }
+.navy-bg { background-color: #0b132b; }
+
+.see-more {
+    display: inline-block; margin-top: 15px; font-size: 14px; color: #4a5568; text-decoration: none; font-style: italic;
+}
+
+/* --- 5. CTA SECTION --- */
+.cta-section {
+    background-color: #edf2f7;
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.cta-section h2 { font-size: 22px; font-weight: 700; margin-bottom: 10px; color: #1a202c; text-transform: capitalize;}
+.cta-section p { font-size: 14px; color: #4a5568; margin-bottom: 25px; }
+
+.btn-cta {
+    background-color: #0b132b; color: #ffffff; padding: 12px 40px; display: inline-block; font-size: 13.5px; font-weight: 700; border-radius: 4px; text-decoration: none; transition: 0.3s;
+}
+
+.btn-cta:hover { background-color: #1c2541; transform: translateY(-2px); }
+
+/* --- SCREEN RESPONSIVE MOBILE --- */
+@media (max-width: 991px) {
+    .profile-container, .features-container { flex-direction: column; }
+    .stats-container { flex-wrap: wrap; gap: 15px; }
+    .stat-box, .feature-box { width: 48%; }
+    .project-grid { flex-wrap: wrap; justify-content: center; }
+    .project-card { width: 100%; max-width: 350px; }
+    .features-right { display: none; }
+}
+
+@media (max-width: 500px) {
+    .stat-box, .feature-box { width: 100%; }
+}
+
+
+/* --- PERBAIKAN FONT AGAR DI SAMPING KIRI BERANDA --- */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 85vh; /* Mengatur tinggi area banner */
+    display: flex;
+    align-items: center; /* Membuat konten tegak lurus di tengah vertikal */
+    justify-content: flex-start; /* Memaksa isi kontainer merapat ke ujung kiri */
+    padding: 0 8%; /* Jarak aman dari pinggir layar kiri dan kanan (Persis Foto) */
+    background: url('../img/23.png') no-repeat center center/cover;
+}
+
+/* Overlay Transparan Gelap di Belakang Teks */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Menggelapkan background agar teks putih mudah dibaca */
+    z-index: 1;
+}
+
+/* Kontainer Utama Teks */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Menaikkan teks di atas lapisan overlay */
+    max-width: 700px; /* Membatasi lebar teks agar rapi patah ke bawah */
+    text-align: left; /* Membuat barisan teks rata kiri sempurna */
+}
+
+/* Judul Utama: Ahli Konstruksi Profesional */
+.hero-content h1 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+/* Judul Kedua: Hunian, Komersial & Industri (Warna Oranye) */
+.hero-content h2 {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Warna Oranye Khusus Teks Sub-Judul Sesuai Foto */
+.hero-content h2 span {
+    color: #ff6b00; /* Warna Oranye Konstruksi Parta Jasa */
+}
+
+/* Paragraf Deskripsi Pendek */
+.hero-content p {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 15px;
+    color: #e2e8f0; /* Putih sedikit abu-abu lembut agar tidak silau */
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Baris Tombol Aksi */
+.hero-btns {
+    display: flex;
+    gap: 15px; /* Jarak antar tombol kiri dan kanan */
+    justify-content: flex-start; /* Memastikan tombol ikut rata kiri */
+}
+
+/* Base style tombol */
+.hero-btns a {
+    display: inline-block;
+    padding: 12px 28px;
+    font-size: 13.5px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+/* Tombol Konsultasi Gratis (Oranye) */
+.btn-primary {
+    background-color: #ff6b00;
+    color: #ffffff;
+    border: 2px solid #ff6b00;
+}
+
+.btn-primary:hover {
+    background-color: #e05e00;
+    border-color: #e05e00;
+    transform: translateY(-2px);
+}
+
+/* Tombol Lihat Layanan (Putih) */
+.btn-outline {
+    background-color: #ffffff;
+    color: #1a202c;
+    border: 2px solid #ffffff;
+}
+
+.btn-outline:hover {
+    background-color: #f7fafc;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   RESPONSIVE LAYOUT UNTUK SMARTPHONE (HP)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .hero {
+        padding: 0 5%; /* Mempersempit jarak pinggir di layar HP */
+        min-height: 75vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 32px;
+    }
+    
+    .hero-content h2 {
+        font-size: 28px;
+    }
+    
+    .hero-content p {
+        font-size: 14px;
+    }
+    
+    .hero-btns {
+        flex-direction: column; /* Tombol bertumpuk atas-bawah saat dibuka di HP */
+        gap: 10px;
+    }
+    
+    .hero-btns a {
+        text-align: center;
+        width: 100%;
+    }
+}

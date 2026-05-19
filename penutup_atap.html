@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-id="Jasa Renovasi Rumah" data-en="Home Renovation Services">Jasa Renovasi Rumah</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="loader">
+        <div class="loader-content">
+            <div class="logo-loader"><img src="img/PARTA.png" alt="logo"></div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+    <nav id="main-nav">
+        <div class="logo">
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                <img src="img/logo.png" alt="Icon" class="logo-img-home" style="width: 80px;">
+            </a>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <div class="close-btn-container" id="close-menu">
+                <i class="fas fa-times"></i>
+            </div>
+            <li><a href="index.html" class="nav-link" data-id="Beranda" data-en="Home">Beranda</a></li>
+            <li><a href="about.html" class="nav-link" data-id="Tentang Kami" data-en="About Us">Tentang Kami</a></li>
+            <!-- Bagian Menu Produk yang diubah -->
+            <li class="dropdown has-mega">
+                <a href="javascript:void(0)" class="nav-link" data-id="Produk" data-en="Products">
+                    Produk <i class="fas fa-chevron-down icon-small"></i>
+                </a>
+
+                <div class="mega-dropdown-wrapper">
+                    <div class="mega-content">
+                        <!-- Kolom 1 -->
+                        <div class="mega-col">
+                            <h3>Pipa & Plumbing</h3>
+                            <ul>
+                                <li><a href="#">Pipa uPVC Standard</a></li>
+                                <li><a href="#">Pipa PE-RT</a></li>
+                                <li><a href="#">Fitting JIS</a></li>
+                                <li><a href="#">Fitting uPVC</a></li>
+                            </ul>
+                        </div>
+                        <!-- Kolom 2 -->
+                        <div class="mega-col">
+                            <h3>Material Bangunan</h3>
+                            <ul>
+                                <li><a href="#">Semen & Mortar</a></li>
+                                <li><a href="#">Bata Ringan</a></li>
+                                <li><a href="#">Pasir & Agregat</a></li>
+                            </ul>
+                        </div>
+                        <!-- Kolom 3 -->
+                        <div class="mega-col">
+                            <h3>Struktur & Konstruksi</h3>
+                            <ul>
+                                <li><a href="#">Baja WF & CNP</a></li>
+                                <li><a href="#">Besi Beton SNI</a></li>
+                                <li><a href="#">Beton Readymix</a></li>
+                            </ul>
+                        </div>
+                        <!-- Kolom 4 -->
+                        <div class="mega-col">
+                            <h3>Finishing & Tools</h3>
+                            <ul>
+                                <li><a href="#">Cat & Finishing</a></li>
+                                <li><a href="#">Interior Fittings</a></li>
+                                <li><a href="#">Peralatan & Tools</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown has-mega">
+                <a href="javascript:void(0)" class="nav-link mega-trigger" data-id="Layanan" data-en="Services">
+                    Layanan <i class="fas fa-chevron-down icon-small"></i>
+                </a>
+                <div class="mega-dropdown-wrapper">
+                    <div class="mega-content">
+                        <div class="mega-col">
+                            <h3 data-id="Rumah Hunian" data-en="Residential Homes">Rumah Hunian</h3>
+                            <ul>
+                                <li><a href="bangun_rumah.html">Jasa Bangun Rumah</a></li>
+                                <li><a href="renovasi.html">Jasa Renovasi Rumah</a></li>
+                                <li><a href="disain_interior.html">Jasa Interior Rumah</a></li>
+                                <li><a href="pagar_kanopi.html">Jasa Pagar & Kanopi</a></li>
+                                <li><a href="desain_rumah.html">Jasa Desain Rumah</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mega-col">
+                            <h3 data-id="Perusahaan (B2B)" data-en="Company (B2B)">Perusahaan (B2B)</h3>
+                            <ul>
+                                <li><a href="renovasi_kantor.html">Jasa Renovasi Kantor</a></li>
+                                <li><a href="gedung.html">Jasa Bangun Gedung</a></li>
+                                <li><a href="fit_out.html">Jasa Fit Out Kantor & Ruko</a></li>
+                                <li><a href="interior_kantor.html">Jasa Interior Kantor</a></li>
+                                <li><a href="konstruksi_baja.html">Jasa Konstruksi Baja</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="mega-col">
+                            <ul>
+                                <li><a href="layanan.html" style="font-weight: bold; color: #ffffff;">Semua Layanan</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><a href="portofolio.html" class="nav-link" data-id="Portofolio" data-en="Portfolio">Portofolio</a></li>
+
+            <li class="dropdown">
+                <span class="nav-link" data-id="Artikel" data-en="Articles">
+                    Artikel <i class="fas fa-chevron-down icon-small"></i>
+                </span>
+                <div class="dropdown-content">
+                    <a href="blog.html" data-id="Blog Konstruksi" data-en="Construction Blog">Blog Konstruksi</a>
+                    <a href="berita.html" data-id="Berita Proyek" data-en="Project News">Berita Proyek</a>
+                </div>
+            </li>
+
+            <li><a href="kontak.html" class="nav-link" data-id="Kontak" data-en="Contact">Kontak</a></li>
+
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                <i class="fas fa-search search-icon" id="search-icon"></i>
+            </div>
+
+            <button class="lang-btn" id="lang-btn">EN</button>
+        </ul>
+
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+
+    <section class="hero about-hero">
+        <div class="container hero-bottom-wrap">
+            <div class="hero-bottom-content">
+                <h1 class="animate-fade-in-up" data-id="Penutup " data-en=" house">Penutup <span data-id="Atap"
+                        data-en="cover">Atap
+                    </span></h1>
+                <p class="animate-fade-in-up-delay" data-id="Transformasi Hunian Menjadi Lebih Bermakna"
+                    data-en="Transform Your Home Into Something More Meaningful">
+                    Transformasi Hunian Menjadi Lebih Bermakna
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="ataps-section">
+        <div class="ataps-container">
+            <div class="atap-card ecotrim animate">
+                <div class="card-header-red">
+                    <p class="atap-label">Atap</p>
+                    <h1 class="atap-name">Ecotrim</h1>
+                </div>
+
+                <div class="images-box">
+                    <img src="img/ecotrim-main.png" alt="Produk Atap Ecotrim" class="main-img">
+                    <img src="img/ecotrim-profile.png" alt="Profil Atap Ecotrim" class="profile-img">
+                </div>
+
+                <div class="details-content">
+                    <div class="spec-row">
+                        <div class="spec-col">
+                            <p class="spec-label">Lebar Efektif</p>
+                            <p class="spec-value">1060 mm</p>
+                        </div>
+                        <div class="spec-col">
+                            <p class="spec-label">Tinggi Gelombang</p>
+                            <p class="spec-value">25 mm</p>
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-col">
+                            <p class="spec-label">Ketebalan</p>
+                            <p class="spec-value highlight">0.25 | 0.30 | 0.35 | 0.40 | 0.45 | 0.50 mm</p>
+                        </div>
+                        <div class="spec-col">
+                            <p class="spec-label">Panjang</p>
+                            <p class="spec-value">Sesuai pesanan,</p>
+                            <p class="spec-value">di atas 14 m bisa ROS</p>
+                        </div>
+                    </div>
+
+                    <div class="sub-product-detail">
+                        <h3 class="inner-title">Detail Produk</h3>
+                        <div class="thumb-wrapper">
+                            <div class="thumb-item"><img src="img/ecotrim-thumb1.png" alt="Detail 1"></div>
+                            <div class="thumb-item"><img src="img/ecotrim-thumb2.png" alt="Detail 2"></div>
+                        </div>
+                    </div>
+
+                    <div class="sub-project-gallery">
+                        <h3 class="inner-title">Foto Proyek</h3>
+                        <div class="project-box">
+                            <img src="img/ecotrim-project.png" alt="Proyek Ecotrim">
+                            <p class="caption-text">Proyek menggunakan atap Ecotrim</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="atap-card econine animate">
+                <div class="card-header-red">
+                    <p class="atap-label">Atap</p>
+                    <h1 class="atap-name">Econine</h1>
+                </div>
+
+                <div class="images-box">
+                    <img src="img/econine-main.png" alt="Produk Atap Econine" class="main-img">
+                    <img src="img/econine-profile.png" alt="Profil Atap Econine" class="profile-img">
+                </div>
+
+                <div class="details-content">
+                    <div class="spec-row">
+                        <div class="spec-col">
+                            <p class="spec-label">Lebar Efektif</p>
+                            <p class="spec-value">765 mm</p>
+                        </div>
+                        <div class="spec-col">
+                            <p class="spec-label">Tinggi Gelombang</p>
+                            <p class="spec-value">15 mm</p>
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-col">
+                            <p class="spec-label">Ketebalan</p>
+                            <p class="spec-value highlight">0.25 | 0.30 | 0.35 | 0.40 mm</p>
+                        </div>
+                        <div class="spec-col">
+                            <p class="spec-label">Panjang</p>
+                            <p class="spec-value">Sesuai pesanan,</p>
+                            <p class="spec-value">di atas 14 m bisa ROS</p>
+                        </div>
+                    </div>
+
+                    <div class="sub-product-detail">
+                        <h3 class="inner-title">Detail Produk</h3>
+                        <div class="thumb-wrapper">
+                            <div class="thumb-item"><img src="img/econine-thumb1.png" alt="Detail 1"></div>
+                            <div class="thumb-item"><img src="img/econine-thumb2.png" alt="Detail 2"></div>
+                        </div>
+                    </div>
+
+                    <div class="sub-project-gallery">
+                        <h3 class="inner-title">Foto Proyek</h3>
+                        <div class="project-box">
+                            <div class="gray-placeholder"></div>
+                            <p class="caption-text">Proyek menggunakan atap Econine</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="color-options-footer">
+        <div class="color-container">
+            <h2 class="color-title">Pilihan Warna</h2>
+
+            <div class="color-grid">
+                <span class="color-capsule merah-merapi">Merah Merapi</span>
+                <span class="color-capsule hitam-rumbai">Hitam Rumbai</span>
+                <span class="color-capsule hijau-borneo">Hijau Borneo</span>
+                <span class="color-capsule biru-bromo">Biru Bromo</span>
+                <span class="color-capsule merah-carita">Merah Carita</span>
+                <span class="color-capsule coklat-bengkalis">Coklat Bengkalis</span>
+                <span class="color-capsule netral-abu">Netral</span>
+            </div>
+        </div>
+
+        <div class="wa-footer-container">
+            <a href="https://wa.me/62895406014065?text=Halo%20Parta%20Jasa,%20saya%20tertarik%20dan%20ingin%20bertanya%20mengenai%20produk%20Atap%20Ecotrim%20dan%20Econine."
+                target="_blank" class="wa-chat-btn">
+                <i class="fab fa-whatsapp"></i> Hubungi via WhatsApp (Tanya Produk)
+            </a>
+        </div>
+    </footer>
+
+    <section class="ataps-section">
+        <div class="ataps-container">
+            <div class="atap-card ecotrim animate">
+                <div class="card-header-red">
+                    <p class="atap-label">Atap</p>
+                    <h1 class="atap-name">Ecospan</h1>
+                </div>
+
+                <div class="images-box">
+                    <img src="img/ecospan-main.png" alt="Produk Atap Ecospan" class="main-img">
+                    <img src="img/ecospan-profile.png" alt="Profil Atap Ecospan" class="profile-img">
+                </div>
+
+                <div class="details-content">
+                    <div class="spec-row">
+                        <div class="spec-col">
+                            <p class="spec-label">Lebar Efektif</p>
+                            <p class="spec-value">1000 mm</p>
+                        </div>
+                        <div class="spec-col">
+                            <p class="spec-label">Tinggi Gelombang</p>
+                            <p class="spec-value">25 mm</p>
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-col">
+                            <p class="spec-label">Ketebalan</p>
+                            <p class="spec-value highlight">0.25 | 0.30 | 0.35 | 0.40 | 0.45 | 0.50 mm</p>
+                        </div>
+                        <div class="spec-col">
+                            <p class="spec-label">Panjang</p>
+                            <p class="spec-value">Sesuai pesanan,</p>
+                            <p class="spec-value">di atas 14 m bisa ROS</p>
+                        </div>
+                    </div>
+
+                    <div class="sub-product-detail">
+                        <h3 class="inner-title">Detail Produk</h3>
+                        <div class="thumb-wrapper">
+                            <div class="thumb-item"><img src="img/ecospan-thumb1.png" alt="Detail 1"></div>
+                            <div class="thumb-item"><img src="img/ecospan-thumb2.png" alt="Detail 2"></div>
+                        </div>
+                    </div>
+
+                    <div class="sub-project-gallery">
+                        <h3 class="inner-title">Foto Proyek</h3>
+                        <div class="project-box">
+                            <img src="img/ecospan-project.png" alt="Proyek Ecospan">
+                            <p class="caption-text">Proyek menggunakan atap Ecospan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="atap-card econine animate">
+                <div class="card-header-red">
+                    <p class="atap-label">Atap</p>
+                    <h1 class="atap-name">KR-3 (760)</h1>
+                </div>
+
+                <div class="images-box">
+                    <img src="img/econine-main.png" alt="Produk Atap Econine" class="main-img">
+                    <img src="img/econine-profile.png" alt="Profil Atap Econine" class="profile-img">
+                </div>
+
+                <div class="details-content">
+                    <div class="spec-row">
+                        <div class="spec-col">
+                            <p class="spec-label">Lebar Efektif</p>
+                            <p class="spec-value">765 mm</p>
+                        </div>
+                        <div class="spec-col">
+                            <p class="spec-label">Tinggi Gelombang</p>
+                            <p class="spec-value">30 mm</p>
+                        </div>
+                    </div>
+
+                    <div class="spec-row">
+                        <div class="spec-col">
+                            <p class="spec-label">Ketebalan</p>
+                            <p class="spec-value highlight">0.25 | 0.30 | 0.35 | 0.40 | 0.45 | 0.50 mm</p>
+                        </div>
+                        <div class="spec-col">
+                            <p class="spec-label">Panjang</p>
+                            <p class="spec-value">Sesuai pesanan,</p>
+                            <p class="spec-value">di atas 14 m bisa ROS</p>
+                        </div>
+                    </div>
+
+                    <div class="sub-product-detail">
+                        <h3 class="inner-title">Detail Produk</h3>
+                        <div class="thumb-wrapper">
+                            <div class="thumb-item"><img src="img/econine-thumb1.png" alt="Detail 1"></div>
+                            <div class="thumb-item"><img src="img/econine-thumb2.png" alt="Detail 2"></div>
+                        </div>
+                    </div>
+
+                    <div class="sub-project-gallery">
+                        <h3 class="inner-title">Foto Proyek</h3>
+                        <div class="project-box">
+                            <div class="gray-placeholder"></div>
+                            <p class="caption-text">Proyek menggunakan atap KR-3 (760)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="color-options-footer">
+        <div class="color-container">
+            <h2 class="color-title">Pilihan Warna</h2>
+
+            <div class="color-grid">
+                <span class="color-capsule merah-merapi">Merah Merapi</span>
+                <span class="color-capsule hitam-rumbai">Hitam Rumbai</span>
+                <span class="color-capsule hijau-borneo">Hijau Borneo</span>
+                <span class="color-capsule biru-bromo">Biru Bromo</span>
+                <span class="color-capsule merah-carita">Merah Carita</span>
+                <span class="color-capsule coklat-bengkalis">Coklat Bengkalis</span>
+                <span class="color-capsule netral-abu">Netral</span>
+            </div>
+        </div>
+
+        <div class="wa-footer-container">
+            <a href="https://wa.me/62895406014065?text=Halo%20Parta%20Jasa,%20saya%20tertarik%20dan%20ingin%20bertanya%20mengenai%20produk%20Atap%20KR-3%20(760)%20dan%20Ecospan."
+                target="_blank" class="wa-chat-btn">
+                <i class="fab fa-whatsapp"></i> Hubungi via WhatsApp (Tanya Produk)
+            </a>
+        </div>
+    </footer>
+
+    <footer class="main-footer">
+        <div class="footer-top">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <div class="logo-footer" data-id="Tentang" data-en="About">
+                        Tentang <span data-id="Kami" data-en="Us">Kami</span>
+                    </div>
+                    <p class="footer-desc"
+                        data-id="Kami adalah mitra konstruksi terpercaya yang berfokus pada kualitas tinggi, ketepatan waktu, dan inovasi desain arsitektur modern di Indonesia."
+                        data-en="We are a trusted construction partner focused on high quality, timely delivery, and innovative modern architectural design in Indonesia.">
+                        Kami adalah mitra konstruksi terpercaya yang berfokus pada kualitas tinggi, ketepatan waktu, dan
+                        inovasi desain arsitektur modern di Indonesia.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/parta_jasakonstruksi?igsh=aTJsdWU2a2Jqbmp4&utm_source=qr"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="footer-title" data-id="Tautan Cepat" data-en="Quick Links">Tautan Cepat</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span data-id="Beranda"
+                                    data-en="Home">Beranda</span></a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> <span data-id="Tentang Kami"
+                                    data-en="About Us">Tentang Kami</span></a></li>
+                        <li><a href="layanan.html"><i class="fas fa-chevron-right"></i> <span data-id="Layanan"
+                                    data-en="Services">Layanan</span></a></li>
+                        <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> <span data-id="Portofolio"
+                                    data-en="Portfolio">Portofolio</span></a></li>
+                        <li><a href="kontak.html"><i class="fas fa-chevron-right"></i> <span data-id="Kontak"
+                                    data-en="Contact">Kontak</span></a></li>
+                    </ul>
+                </div>
+
+
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="footer-title" data-id="Kontak Kami" data-en="Contact Us">Kontak Kami</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Fatmawati, Kel. Mangun Harjo, Kec. Purwodadi.
+                                Kab. Musi Rawas, Kabupaten Musirawas, Sumatera Selatan 31672</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+62 8954 0601 4065</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>partajasakonstruksi@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 <strong>CV Parta Jasa Konstruksi</strong>. All Rights Reserved. Designed for Excellence.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cards = document.querySelectorAll(".atap-card");
+
+            // Memunculkan kartu satu per satu secara berurutan saat halaman siap
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.classList.add("revealed");
+                }, index * 250); // Jeda kemunculan 250 milidetik antar kartu
+            });
+        });
+    </script>
+</body>
+
+</html>
